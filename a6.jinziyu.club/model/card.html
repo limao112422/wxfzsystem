@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+  <title>信用卡区</title>
+     <link rel="stylesheet" href="http://361.360pr7.cn/public/static/css/bootstrap.min.css">
+     <script src="http://361.360pr7.cn/public/static/js/jquery-3.3.1.min.js"/></script>
+     <link rel="stylesheet" href="http://361.360pr7.cn/public/static/css/swiper.min.css">
+     <meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">
+    
+    <!--
+    <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+    <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+    -->
+   <link rel="stylesheet" href="http://361.360pr7.cn/public/static/frozenui/css/frozen.css">
+
+     <script src="http://361.360pr7.cn/public/static/js/bootstrap.min.js"></script>
+     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+     <style type="text/css">
+
+     
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+     h4{
+      font-size:15px;
+     }
+     h5{
+     font-size:12px;
+     }
+     .badge{
+            background:#FF9933;
+            position: absolute;
+            left: 50px;
+            top: 0px;
+     }
+
+     .col-xs-5{
+         background: #E8E8E8;
+         margin: 5px;
+         height:65px;
+         width: 185px;
+     }
+      .col-xs-5 .img-circle{
+          width: 55px; 
+          position: absolute;
+          left: 130px;
+          top: 8px; 
+     }
+
+     #bnt1{
+       border:1px solid #FF6633 ; 
+       background-color:#ffffff;
+        color: #FF6633;
+         border-radius:25px;
+         -moz-border-radius:25px;
+     }
+
+     h4{
+       margin-top:16px;
+     }
+     
+      #car{
+            background:url('http://361.360pr7.cn/public/static/images/car.png');
+            -moz-background-size:80px 100px; /* 老版本的 Firefox */
+            background-size:230px 200px;
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
+
+      }
+
+    
+   
+   
+   html, body {
+              position: relative;
+              height: 46%;
+            }
+            body {
+              background: #F8F8F8;
+              font-size: 14px;
+              color:#000;
+              margin: 0;
+              padding: 0;
+            }
+    
+
+    a:link{color:#000000;  }
+    a:visited{ color:#000000;  }
+    a:hover{ color:#000000;}
+    a:active{color:#000000;}
+    
+  
+  #goods{ 
+    position:fixed;
+    top:90px;
+    right:5px;
+    z-index:999;
+      
+}
+
+
+
+
+  .button .col-xs-2{
+        width: 80px;
+        color:#ccc;
+        padding-top: 5px;
+        height: 60px;
+        text-align:center;
+         font-size: 12px;
+         background: #ffffff;
+        
+    
+   }
+
+
+
+
+   #contentimg{
+      position:fixed;
+      left:174px;
+      top:585px;
+   }
+
+
+
+    </style>
+    
+
+</head>
+<body style="font-size: 15px;"  >
+<!--
+  <a href="/service/index"> 
+ <div id="goods">
+   <img src="http://361.360pr7.cn/public/static/images/kk.png" width="50px" id="kk" />
+ </div>
+ </a> 
+ -->
+
+ 
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\d4a75674cd0dff36200caba9e0c255c1.jpg" style="height: 142px; width: 100%;" ></div>
+    <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\3bf2bc86a8b09a94b9e52a443f06fd73.jpg" style="height: 142px; width: 100%;" ></div>
+    <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\9d2729727a14ec8396e699ae685fa680.jpg" style="height: 142px; width: 100%;" ></div>
+    
+  </div>
+  <!--分页-->
+  <div class="swiper-pagination"></div>
+</div>
+
+
+
+ 
+ <div class="container-fluid">
+  <div class="row">
+<div class="col-xs-12" style="margin-top:10px; background: #ffffff; ">
+
+<h4 style="padding-top:5px;">热门银行</span><br><hr style="margin: 5px;">
+
+    <a href="/card/content?name=华夏银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\82e604bb4fab08b8e9c17a42b234313c.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">高额</span>
+              <h4>华夏银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=浦发银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\ff8bd2c597f04b9e9e535e0157cb0ca0.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">秒批</span>
+              <h4>浦发银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=中国银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\172b335ca92ab21009dcfaabadd98d76.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">推荐</span>
+              <h4>中国银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=平安银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\fbac2dc973b22e812e067ad4319894a6.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">推荐</span>
+              <h4>平安银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=工商银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\e1e3458536bfe306a1f6146269a5445e.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">高额</span>
+              <h4>工商银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=民生银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\bede308fda06fed8800ece1cec30fe6a.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">秒批</span>
+              <h4>民生银行</h4>
+      </div>
+     </a> 
+     <a href="/card/content?name=交通银行"> 
+      <div class="col-xs-3" id="category" style="color: #686868;">
+        <img src="http://361.360pr7.cn/public/uploads/20180313\df85fc8ca6f83cf26193062550039352.png" alt="..." class="img-circle" style="width: 60px; ">
+        <span class="badge">高额</span>
+              <h4>交通银行</h4>
+      </div>
+     </a> 
+    
+  <a href="/card/content">
+      <div class="col-xs-3" id="category">
+        <img src="http://361.360pr7.cn/public/static/images/cat.png" alt="..." class="img-circle" style="width: 60px; ">
+       <h4>全部银行</h4>
+             
+      </div>
+   </a>
+
+</div>
+
+ <div class="col-xs-12" style="height: 10px; margin: 1px; background: #E0E0E0; width: 408px;"></div>
+<a href="/card/content?status=4">
+              <div class="col-xs-6" id="car" style=" margin: 5px; height:140px;">
+              <h4>车主卡<br><h5 style="margin-top:5px; color:#B8B8B8; ">加油返现,免费新车</h5></h4>
+              
+                   <img src="http://361.360pr7.cn/public/static/images/vehicle.png" width="80px;" id="cars" style="margin-top: 45px; margin-left:0px; " />
+             </div>
+</a>             
+<a href="/card/content?status=2">             
+             <div class="col-xs-5" style=" ">
+             <h4>超市/商场卡<br><h5 style="margin-top:5px; color:#B8B8B8; ">双重积分，免费兑换</h5></h4>
+             <img src="http://361.360pr7.cn/public/static/images/market.png" style="" class="img-circle">
+             </div>
+</a>             
+<a href="/card/content?status=3">        
+              <div class="col-xs-5">
+                 
+                  <h4>酒店/商旅卡<br><h5 style="margin: 0px; color:#B8B8B8; ">房价9折，延迟退房</h5></h4>
+                  <img src="http://361.360pr7.cn/public/static/images/shopping.png"  class="img-circle">
+
+             </div>
+</a>             
+<a href="/card/content?status=5">
+              <div class="col-xs-6" style=" background: #E8E8E8; margin: 5px; height:65px;">
+                <h4>航空卡<br><h5 style="margin: 0px; color:#B8B8B8; ">里程兑换，高额保险</h5></h4>
+             <img src="http://361.360pr7.cn/public/static/images/aircraft.png" style="width: 54px;   position: absolute;left: 150px;top: 10px; " class="img-circle">
+             </div>
+</a>
+<a href="/card/content?status=4">
+              <div class="col-xs-5" >
+               <h4>旅游卡<br><h5 style="margin: 0px; color:#B8B8B8; ">景点门票优惠折扣</h5></h4>
+             <img src="http://361.360pr7.cn/public/static/images/tourism.png"  class="img-circle">
+             </div>
+</a>             
+
+   <a href="/card/content">
+        <div class="col-xs-12" style="background:#E8E8E8; height: 30px;  ">
+         <div style="margin-top:5px; ">
+          推荐信用卡 <span style="  float: right;">更多>></span>
+          </div>
+        </div>
+   </a>     
+
+   <a href="/card/finds?id=8&link=https://www.xindaidongli.com/customer/verify?shareParam=share&partnerId=jtxyk&userId=61915&channel=7">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             交通银行&航空卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180324\1060f3da5d9d7d8b1ea20eebdca12e1e.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>70元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=7&link=https://www.xindaidongli.com/customer/verify?shareParam=share&partnerId=shxyk&userId=61915&channel=7">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             上海银行&车主卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180524\72ad5b7a8da5bba190537846bfdda1e4.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>80元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=6&link=https://www.xindaidongli.com/customer/verify?shareParam=share&partnerId=pfxyk&userId=61915&channel=7">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             浦发银行&旅游卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180324\2923e12097073f83b0de18d31b4ef284.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>60元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=5&link=https://www.xindaidongli.com/customer/verify?shareParam=share&partnerId=msxyk&userId=61915&channel=7">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             民生银行&超市/商场卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180324\0522de99b1770fb9d893ad2a81012280.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>60元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=4&link=https://xyk.cebbank.com/cebmms/apply/ps/card-list.htm?pro_code=FHTG067633SA0577HEZZ">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             光大普卡&酒店/商旅卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180324\f5c0ff30375c53512345b9d89520993b.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>50元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=3&link=http://jy.gkekj.cn/445">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             中信银行&酒店/商旅卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180313\fb9720e6a14e88eccb903d6644f0d560.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>75元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+   <a href="/card/finds?id=1&link=https://ccshop.cib.com.cn:8010/application/cardapp/newfast/ApplyCard/toSelectCard?id=2436f6a7cea74e819cb04a6c26d7bd25">
+      <div class="col-xs-12" style="background: #ffffff; margin-top:10px;">       
+          <div class="col-xs-12" style="margin-top:10px; margin-bottom:10px; ">
+             兴业银行&车主卡             <span style="float: right;color: #cccccc;">详情></span>
+          </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div>
+          <div class="col-xs-3" style="margin: 10px 0px 25px 0px;">
+             <img src="http://361.360pr7.cn/public/uploads/20180324\35481551ff81da894054265b02629032.jpg"  class="img-rounded" style="width: 100px;" >
+          </div>
+                  <div class="col-xs-8" style="margin: 5px 0px 0px 10px;color: #909090;">
+                    <span style="margin:1px; color: #cccccc;">取现额度：</span>65元/户<br>
+                    <span style="margin:1px; color: #cccccc;">发卡组织：</span>银联<br>
+                      <input id="bnt1"  name="bnt1" type="button" value="立即申请" />
+
+                  </div>
+  </div>
+ </a>   
+    
+
+  
+      </div>
+</div>
+
+<div style="margin: 50px;">蚂蚁金服 版权所有</div>
+
+<script src="http://361.360pr7.cn/public/static/js/swiper.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  //改变图标
+  //  $("#rel").css({"background":"url(http://361.360pr7.cn/public/static/img/f2s.png) no-repeat top center","color":"red","background-size":"30px 30px"});
+  $('#rel').attr('src', 'http://361.360pr7.cn/public/static/img/f2s.png');
+       
+  var mySwiper = new Swiper('.swiper-container', {
+  //分页参数
+   pagination: {
+    el: '.swiper-pagination',
+  },
+  autoplay: true,//可选选项，自动滑动
+
+})
+     
+    $("#cars").animate({marginLeft:"100px"},1500,"swing");
+
+
+ 
+  
+
+ });
+</script>
+
+  
+<nav class="navbar navbar-default navbar-fixed-bottom">
+ 
+<div class="button">
+
+ <a href="/" >
+   <div class="col-xs-2" >
+      <img src="http://361.360pr7.cn/public/static/img/f12.png" width="30px" id="sy"  ><br>
+      贷款中心
+   </div>
+</a>   
+
+ <a href="/card"  >
+   <div class="col-xs-2" >
+          <img src="http://361.360pr7.cn/public/static/img/f2.png" width="30px" id="rel"  ><br> 
+       办卡中心
+   </div>
+</a>   
+     
+  <!-- <a href="/member/index"  class="content" id="xs12s" >-->       
+   <a href="/communityindex"  class="content" id="xs12s" >       
+    <div class="col-xs-2" style="padding-top: 18px;">
+     <img src="http://361.360pr7.cn/public/static/img/f5.png" width="55px" id="contentimg"  ><br>   
+    技术社区
+    </div>
+  </a>   
+
+<a href="/recommend" >
+    <div class="col-xs-2" id="xs12s">
+     <img src="http://361.360pr7.cn/public/static/img/f3.png" width="30px" id="money"  ><br>     
+      产品推荐
+    </div>
+</a>    
+        
+<a href="/userindex" >
+    <div class="col-xs-2">
+     <img src="http://361.360pr7.cn/public/static/img/f4.png" width="30px" id="user"  ><br>   
+      个人中心
+ </div>   
+</a>
+
+  </div>
+</nav>
+
+
+ <script type="text/javascript">
+
+var phoneWidth =  parseInt(window.screen.width);
+var phoneScale = phoneWidth/640;
+var ua = navigator.userAgent;
+if (/Android (\d+\.\d+)/.test(ua)){
+    var version = parseFloat(RegExp.$1);
+    if(version>2.3){
+        document.write('<meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">');
+    }else{
+        document.write('<meta name="viewport" content="width=40, target-densitydpi=device-dpi">');
+    }
+} else {
+    document.write('<meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">');
+}
+
+
+$(document).ready(function(){
+     
+      
+});
+
+// 有效的 拖动效果
+      var block = document.getElementById("goods");
+  var oW,oH;
+  // 绑定touchstart事件
+  block.addEventListener("touchstart", function(e) {
+   console.log(e);
+   var touches = e.touches[0];
+   oW = touches.clientX - block.offsetLeft;
+   oH = touches.clientY - block.offsetTop;
+   //阻止页面的滑动默认事件
+   document.addEventListener("touchmove",defaultEvent,false);
+  },false)
+ 
+  block.addEventListener("touchmove", function(e) {
+   var touches = e.touches[0];
+   var oLeft = touches.clientX - oW;
+   var oTop = touches.clientY - oH;
+   if(oLeft < 0) {
+    oLeft = 0;
+   }else if(oLeft > document.documentElement.clientWidth - block.offsetWidth) {
+    oLeft = (document.documentElement.clientWidth - block.offsetWidth);
+   }
+   block.style.left = oLeft + "px";
+   block.style.top = oTop + "px";
+  },false);
+   
+  block.addEventListener("touchend",function() {
+   document.removeEventListener("touchmove",defaultEvent,false);
+  },false);
+  function defaultEvent(e) {
+   e.preventDefault();
+  }
+
+ </script>
+</body>
+</html>
