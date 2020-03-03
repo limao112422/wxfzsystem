@@ -1,0 +1,167 @@
+<section class="content-header">
+	<div>
+		<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+			<li>
+				<a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;">
+				<i class=" fa fa-home">
+				&nbsp;</i>Home</a>
+			</li>
+			<li class="active">任务设置</li>
+			<li class="active">手机号下单</li>
+		</ol>
+	</div>
+</section>
+
+<style>
+.col-sm-3 {
+    width: 15%;
+}
+</style>
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-primary">
+				<form class="form-horizontal" style="margin-top:30px" method="POST" id="form" action="{:U('Qudao/list_add')}" enctype="multipart/form-data">
+					<div class="box-body">
+						
+						<a href="{:U('Qudao/Main_index')}">
+						<div class="form-group">
+							<label for="name" class="control-label col-sm-3">手机号辅助成功再注册（手机提交后的5分钟左右就能知道辅助结果，辅助成功后30分钟内必须去注册，否则辅助将会失效），具体扣费看余额明细
+                                </label>
+							<div class="col-sm-6">
+                                <input type="text" name="pay" value="{$yongjin}" class="form-control col-sm-9">
+                                <input type="text" name="pay" value="{$yongjin}" class="form-control col-sm-9">
+                                <button type="button" id="sigleAdd" class="btn btn-primary">添加单个手机号</button>
+                                <button type="button" id="plAdd" class="btn btn-primary">批量添加手机号</button>
+								<p style="height:40px;line-height:40px;background:green;width:60px;color:#fff;text-align:center;font-size:19px">已输入0位数，辅助手机号必须11位</p>
+							</div>
+						</div>	
+                      	</a>
+					</div>	
+            </div>					
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title"></h3>
+                            <div class="box-tools" style="left:10px;">
+                                <form class="form-inline" method="post" action="{:U('Qudao/jieshen')}">
+                                    <div class="form-group">
+                                        <select name="keyword6" id="status" class="form-control" default="">
+                                            <option value="">操作</option>
+                                            <option value="0">手机号</option>
+                                            <option value="1">标记是否注册</option>
+                                        </select>
+                                        
+                                        
+                                        <div class="input-group">
+                                            <input type="text" name="keyword4" class="form-control reservationtime" style="width:120px;" placeholder="开始时间" autocomplete="off" value="">
+                                        </div>
+                                        <span>-</span>
+                                        <div class="input-group">
+                                            <input type="text" name="keyword5" class="form-control reservationtime" style="width:120px;" placeholder="结束时间" autocomplete="off" value="">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <table class="table table-bordered table-hover table-striped text-center">
+                                <tbody>
+                                    <tr>
+                                        <th>操作</th>
+                                        <th>手机号</th>
+                                        <th>标记是否注册</th>
+                                    </tr>
+                                        
+                                        <volist name="data" id="vo">
+                                            <tr>
+                                                <th>{$vo.id}</th>
+                                                <th>{$vo.rel}</th>
+                                                <th>{$vo.tuiuser}</th>					
+                                            </tr>
+                                        </volist>
+                                 </tbody>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="page">{$page}</div>
+                    </div>
+                </div>
+            </div>
+			<!-- PAGE CONTENT ENDS -->
+		</div><!-- /.col -->
+	</div>          
+</section>
+<script src="__PUBLIC__/Baidu/ueditor.config.js"></script>
+<script src="__PUBLIC__/Baidu/ueditor.all.min.js"></script>
+<script>
+	var ue1 = UE.getEditor('liuc');
+	var ue2 = UE.getEditor('need');
+</script>
+
+<div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+<script src="__PUBLIC__/js/commonz.js"></script>
+<script>
+	var route = "c=Goods&a=edit";
+    var href = '';
+    $('.sidebar-menu').find('a').each(function () {
+        $(this).parent('li').removeClass('active');
+        href = $(this).attr('href');
+        if ((href.indexOf(route) != -1)) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.treeview').addClass('active');
+			return false;
+		}
+    });
+
+    $('.sigleAdd').click(function(ev){
+        layer.open({
+                  type: 2,
+                  title: '人数折线图',
+                  shadeClose: true,
+                  shade: 0.8,
+                  maxmin: true,
+                  area :["80%","750px"],
+                  content: '/member/peozxt', //iframe的url
+                  success: function(layero, index) {
+                    layer.iframeAuto(index);
+                  }
+                });
+    });
+
+    $('.plAdd').click(function(ev){
+        layer.open({
+                  type: 2,
+                  title: '人数折线图',
+                  shadeClose: true,
+                  shade: 0.8,
+                  maxmin: true,
+                  area :["80%","750px"],
+                  content: '/member/peozxt', //iframe的url
+                  success: function(layero, index) {
+                    layer.iframeAuto(index);
+                  }
+                });
+    });
+
+
+    $('.dropdown-toggle').click(function (ev) {
+        $(this).find('.fa-angle-down').toggleClass('hidden');
+        $(this).find('.fa-angle-up').toggleClass('hidden');
+    });
+	
+	// 调整默认选择内容
+	$("select").each(function(index, element) {
+		$(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+	});
+</script>
+<script>
+</script>
