@@ -1,0 +1,828 @@
+[ 2019-12-18T15:31:20+08:00 ] 125.118.56.211 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653980 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653980 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-12-18T15:31:24+08:00 ] 125.118.56.211 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653984 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653984 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2019-12-18T15:31:28+08:00 ] 125.118.56.211 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653988 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653988 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000385s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+
+[ 2019-12-18T15:31:32+08:00 ] 125.118.56.211 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653992 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576653992 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2019-12-18T15:35:21+08:00 ] 113.119.179.10 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000531s ]
+
+[ 2019-12-18T15:35:21+08:00 ] 113.119.179.10 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004881s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2019-12-18T15:35:21+08:00 ] 113.119.179.10 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-18T15:35:22+08:00 ] 113.119.179.10 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-18T15:35:22+08:00 ] 113.119.179.10 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2019-12-18T15:35:35+08:00 ] 113.119.179.10 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `mobile` = '13444444444' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: nic /www/wwwroot/a6.jinziyu.club/My/Home/Controller/LoginController.class.php 第 35 行.
+
+[ 2019-12-18T15:35:37+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654237 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654237 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000435s ]
+
+[ 2019-12-18T15:35:40+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654240 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654240 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2019-12-18T15:35:43+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654243 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654243 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006408s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006452s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2019-12-18T15:35:46+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654246 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654246 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2019-12-18T15:35:50+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654250 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654250 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006209s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000490s ]
+
+[ 2019-12-18T15:35:53+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654253 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654253 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2019-12-18T15:35:57+08:00 ] 113.119.179.10 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654257 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654257 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000643s ]
+
+[ 2019-12-18T15:35:58+08:00 ] 113.119.179.10 /community/text/id/5.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `h_text` SET `pv`=pv+1 WHERE `Id` = 5 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 5 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2019-12-18T15:36:00+08:00 ] 113.119.179.10 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654260 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654260 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006390s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2019-12-18T15:36:02+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654262 LIMIT 1   [ RunTime:0.0021s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654262 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006184s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000452s ]
+
+[ 2019-12-18T15:36:04+08:00 ] 113.119.179.10 /Card/shuju.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000430s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = 0 AND `addtime` > 1576654264 ORDER BY addtime Asc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-12-18T15:36:05+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654265 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654265 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006270s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000453s ]
+
+[ 2019-12-18T15:36:08+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000435s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654268 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654268 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2019-12-18T15:36:11+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654271 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654271 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005781s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2019-12-18T15:36:13+08:00 ] 113.119.179.10 /user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0303s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0152s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '2'  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0008s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in /www/wwwroot/a6.jinziyu.club/My/Home/Controller/UserController.class.php on line 56 and defined /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1816 行.
+SQL: SELECT * FROM `h_text`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005791s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2019-12-18T15:36:17+08:00 ] 113.119.179.10 /user/qrcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000345s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2019-12-18T15:36:17+08:00 ] 113.119.179.10 /Register/qrcodeimgaaa.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2019-12-18T15:36:18+08:00 ] 113.119.179.10 /Public/css/frozen.css.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-18T15:36:18+08:00 ] 113.119.179.10 /Public/css/swiper.min.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-18T15:36:18+08:00 ] 113.119.179.10 /Register/qrcodeimg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2019-12-18T15:36:23+08:00 ] 113.119.179.10 /user/problem.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+SQL: SHOW COLUMNS FROM `h_block` [ RunTime:0.0862s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in /www/wwwroot/a6.jinziyu.club/My/Home/Controller/UserController.class.php on line 304 and defined /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1816 行.
+SQL: SELECT * FROM `h_block`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015393s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000238s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2019-12-18T15:36:26+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654286 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654286 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005952s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2019-12-18T15:36:29+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654289 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654289 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000525s ]
+
+[ 2019-12-18T15:36:32+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654292 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654292 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000420s ]
+
+[ 2019-12-18T15:36:35+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654295 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654295 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005753s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2019-12-18T15:36:38+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654298 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654298 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008724s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2019-12-18T15:36:42+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654302 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654302 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006475s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2019-12-18T15:36:45+08:00 ] 113.119.179.10 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654305 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654305 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2019-12-18T15:36:46+08:00 ] 113.119.179.10 /community/text/id/4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `h_text` SET `pv`=pv+1 WHERE `Id` = 4 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 4 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000066s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003723s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000174s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2019-12-18T15:36:48+08:00 ] 113.119.179.10 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654308 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1576654308 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2019-12-18T15:36:50+08:00 ] 113.119.179.10 /community/text/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 6 LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `h_text` SET `pv`=pv+1 WHERE `Id` = 6 [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 6 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2019-12-18T16:01:56+08:00 ] 125.118.56.211 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+

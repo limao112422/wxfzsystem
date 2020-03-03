@@ -1,0 +1,36 @@
+[ 2019-07-03T21:28:26+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+ERR: 无法加载模块:Member
+
+[ 2019-07-03T21:28:26+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+ERR: 无法加载模块:Member
+
+[ 2019-07-03T21:28:26+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+ERR: 无法加载模块:Member
+
+[ 2019-07-03T21:28:26+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+ERR: 无法加载模块:Member
+
+[ 2019-07-03T21:28:27+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+ERR: 无法加载模块:Member
+
+[ 2019-07-03T21:28:27+08:00 ] 1.70.166.81 /m.php?m=Member&c=User&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+ERR: 无法加载模块:Member
+

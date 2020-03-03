@@ -1,0 +1,12 @@
+[ 2018-08-11T09:53:30+08:00 ] 106.11.157.201 /index.php?a=index&aid=17&id=4&m=List
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:List
+
+[ 2018-08-11T12:38:32+08:00 ] 106.11.154.205 /index.php?a=index&m=Info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+ERR: 无法加载模块:Info
+

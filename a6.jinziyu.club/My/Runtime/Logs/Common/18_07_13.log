@@ -1,0 +1,24 @@
+[ 2018-07-13T05:18:27+08:00 ] 106.11.158.166 /index.php?a=index&m=Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Index
+
+[ 2018-07-13T10:24:37+08:00 ] 101.66.104.244 /index.php?m=Help&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Help
+
+[ 2018-07-13T10:40:06+08:00 ] 101.251.111.132 //index.php?c=api&m=data2&auth=50ce0d2401ce4802751739552c8e4467&param=update_avatar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Data2
+
+[ 2018-07-13T10:40:08+08:00 ] 101.251.111.132 //index.php?m=member&c=index&a=register&siteid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Member
+

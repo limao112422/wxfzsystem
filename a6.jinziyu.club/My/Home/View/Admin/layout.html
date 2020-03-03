@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{$title} - {:C('cfg_sitetitle')} </title>
+    
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap.min.css">
+	<link href="__PUBLIC__/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="__PUBLIC__/css/adminlte.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/_all-skins.min.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/blue.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/bootstrap-datetimepicker.min.css">
+	<link href="https://novel.youshuge.com/img/favicon.ico" rel="icon" type="image/x-icon">
+	<link rel="stylesheet" href="__PUBLIC__/css/layer.css">
+	<script src="__PUBLIC__/js/jquery-2.2.3.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="__PUBLIC__/js/app.min.js"></script>
+	<script src="__PUBLIC__/js/layer.js"></script>
+	<style type="text/css">
+		.skin-purple-light .wrapper, .skin-purple-light .main-sidebar, .skin-purple-light .left-side {
+			background-color: #f9f9f9;
+		}
+
+		.skin-purple-light .sidebar-menu > li > .treeview-menu {
+			background-color: #e8e8e8;
+		}
+
+		.skin-purple-light .sidebar-menu > li > a {
+			font-weight: unset;
+		}
+
+		.skin-purple-light .treeview-menu > li.active > a, .skin-purple-light .sidebar-menu > li.active > a, .skin-purple-light .treeview-menu > li.active > a {
+			background-color: #e6f7ff;
+			border-right: 2px solid #168fff;
+			color: #57b6ff;
+			font-weight: unset;
+		}
+
+		.skin-purple-light .sidebar-menu > li:hover > a, .skin-purple-light .sidebar-menu > li:hover > a, .skin-purple-light .treeview-menu > li > a:hover, .skin-purple-light .sidebar-menu > li > a:hover {
+			color: #57b6ff;
+		}
+
+		.sidebar-menu .treeview-menu > li > a {
+			padding-left: 40px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+		.sidebar-menu .treeview-menu {
+			padding-left: 0;
+		}
+
+		.skin-purple-light .sidebar a {
+			color: #666;
+		}
+
+		.wysiwyg-color-black {
+			color: black !important;
+		}
+
+		.wysiwyg-color-silver {
+			color: silver !important;
+		}
+
+		.wysiwyg-color-gray {
+			color: gray !important;
+		}
+
+		.wysiwyg-color-maroon {
+			color: maroon !important;
+		}
+
+		.wysiwyg-color-red {
+			color: red !important;
+		}
+
+		.wysiwyg-color-purple {
+			color: purple !important;
+		}
+
+		.wysiwyg-color-green {
+			color: green !important;
+		}
+
+		.wysiwyg-color-olive {
+			color: olive !important;
+		}
+
+		.wysiwyg-color-navy {
+			color: navy !important;
+		}
+
+		.wysiwyg-color-blue {
+			color: blue !important;
+		}
+
+		.wysiwyg-color-orange {
+			color: orange !important;
+		}
+		.glyphicon {
+			margin-right: 6px;
+		}
+		.wechat{
+			line-height: 50px;
+			width: 100%;
+			display: block;
+			text-align: center;
+			font-size: 24px;
+			color: #ecfd02;
+		}
+	</style>
+	<link rel="stylesheet" href="__PUBLIC__/css/laydate.css" id="layuicss-laydate">
+	<style type="text/css">
+		.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+	</style>
+</head>
+<body class="sidebar-mini skin-purple-light" style="height: auto;">
+<div class="wrapper" style="height: auto;">
+	<?php if(session('admin_user')){ ?>
+    <include file="./My/Home/View/Admin/Public/new_header.html" />
+    <!-- dcHead 结束 -->
+    <include file="./My/Home/View/Admin/Public/new_left.html" />
+	<?php } else { ?>
+  <include file="./My/Home/View/Qudao/Public/new_header.html" />
+    <!-- dcHead 结束 -->
+    <include file="./My/Home/View/Qudao/Public/new_left.html" />
+  <?php }?>
+    <div class="content-wrapper" style="min-height: 848px;">
+
+            {__CONTENT__}
+
+    </div>
+    <div class="clear"></div>
+    <include file='./My/Home/View/Admin/Public/footer.html' />
+    <!-- dcFooter 结束 -->
+    <div class="clear"></div>
+</div>
+</body>
+</html>

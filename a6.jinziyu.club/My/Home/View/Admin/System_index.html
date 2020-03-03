@@ -1,0 +1,501 @@
+<link rel="stylesheet" href="__PUBLIC__/css/switch.css">
+<link href="__PUBLIC__/css/select2.min.css" rel="stylesheet" />
+<script src="__PUBLIC__/js/select2.min.js"></script>
+<section class="content-header">
+<div>
+	<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+		<li><a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;"><i class=" fa fa-home"></i> Home</a></li>
+		<li class="active">系统设置</li>
+	</ol>
+</div>
+</section><!-- Main content -->
+<section class="content">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header" style="min-height: 35px;">
+				<h3 class="box-title"></h3>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+                <form action="{:U(GROUP_NAME.'/System_index')}" method="post">
+				<table class="table table-bordered table-hover table-striped text-center" style="font-size: 14px;">
+					<tbody>
+                      
+					<tr>
+						
+						
+          			  <th>名称</th>
+                       
+
+           			 <th>内容</th>
+            	
+					</tr>  	
+                       <tr>
+                        <td align="right">站点名称</td>
+                        <td>
+                            <input type="text" name="sitename" value="{:C('cfg_sitename')}" size="80" class="inpMain" />
+                        </td>
+                    </tr> 
+                  	 <tr>
+                        <td align="right">站点标题</td>
+                        <td>
+                            <input type="text" name="sitetitle" value="{:C('cfg_sitetitle')}" size="80" class="inpMain" />
+                        </td>
+                    </tr> 
+         		
+					   <tr>
+                        <td align="right">用户端邀请分成比例</td>
+                        <td>
+                            <input type="text" name="fencheng" value="{:C('cfg_fencheng')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                       <tr>
+                        <td align="right">下单端邀请分成比例</td>
+                        <td>
+                            <input type="text" name="fencheng2" value="{:C('cfg_fencheng2')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                        <tr>
+                        <td align="right">最低提现金额</td>
+                        <td>
+                            <input type="text" name="min" value="{:C('cfg_min')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                      
+					   <tr>
+                        <td align="right">提现手续费比例</td>
+                        <td>
+                            <input type="text" name="tixian" value="{:C('cfg_tixian')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                       <tr>
+                        <td align="right">最低任务发布金额</td>
+                        <td>
+                            <input type="text" name="yongjin" value="{:C('cfg_yongjin')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                        <tr>
+                        <td align="right">任务发布手续费比例</td>
+                        <td>
+                            <input type="text" name="shouxu" value="{:C('cfg_shouxu')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                             <tr>
+                        <td align="right">APP下载地址</td>
+                        <td>
+                            <input type="text" name="dowurl" value="{:C('cfg_dowurl')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                             <tr>
+                        <td align="right">客服微信</td>
+                        <td>
+                            <input type="text" name="wxno" value="{:C('cfg_wxno')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                             <tr>
+                        <td align="right">短信接口地址</td>
+                        <td>
+                            <input type="text" name="SMS_API" value="{:C('cfg_SMS_API')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                             <tr>
+                        <td align="right">短信接口账号</td>
+                        <td>
+                            <input type="text" name="SMS_USER" value="{:C('cfg_SMS_USER')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                             <tr>
+                        <td align="right">短信接口密码</td>
+                        <td>
+                            <input type="text" name="smspass" value="{:C('cfg_smspass')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">平台推广二维码背景图</td>
+                        <td>
+                            <input type="text" name="xiatu" id="thumbnail" value="{:C('cfg_xiatu')}" size="80" class="inpMain" />
+                            <button id="Upload_img" class="btn" type="button">上传</button>
+                            <div style="display: none;">
+                                <input id="imgFile" type="file" name="imgFile" style="display: none;">
+                            </div>
+                            <div id="res_show_img" style="display: none;"></div>                        </td>
+                    </tr>
+                       <tr>
+                        <td align="right">平台LOGO</td>
+                        <td>
+                            <input type="text" name="vipimg" id="thumbnail6" value="{:C('cfg_vipimg')}" size="30" class="inpMain" />
+                            <button id="Upload_img6" class="btn" type="button">上传</button>
+                            <div style="display: none;">
+                                <input id="imgFile6" type="file" name="imgFile" style="display: none;">
+                            </div>
+                            <div id="res_show_img6" style="display: none;"></div>                        </td>
+                    </tr>	
+               </tbody>
+				</table>
+			</div>
+              <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                <tr>
+                    <td width="120"></td>
+                    <td width="743">
+                        <input class="btn" type="submit" onclick="tijiao()"value="提交" />
+                    </td>
+                </tr>
+            </table>
+			<!-- /.box-body -->
+			<div class="page">{$page}</div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+
+<style>
+	.do-txt{
+		display:none;
+	}
+	.do-txt .txts span{
+		
+	}
+	.do-txt .txts{
+		padding:20px 10px 5px;
+		position: relative;
+		display:flex;
+	}
+	.do-txt .txts select{
+		border: 1px solid #ddd;
+		padding: 2px 10px;
+	}
+	.do-txt button{
+		width: 50%;
+		margin: 30px 25%;
+		height: 35px;
+		border: none;
+		background: #f0882c;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 15px;
+		cursor:pointer;
+	}
+	.layui-layer{
+		z-index:999!important;
+	}
+	.layui-layer-shade{
+		z-index:99!important;
+	}
+</style>
+
+<script>
+
+    function delCat(name,jumpurl){
+
+        layer.confirm(
+
+                '确定要删除自由块:['+name+']吗?',
+
+                function (){
+
+                    window.location.href = jumpurl;
+
+                }
+
+        );
+
+    }
+
+</script>
+<script>
+    //上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail").val() != '' && $("#thumbnail").val() != null){
+            $("#res_show_img").show();
+            $("#res_show_img").html('<img src="'+$("#thumbnail").val()+'" width="150px">');
+        }
+
+        $("#Upload_img").click(function (){
+            $("#show_Img").html('');
+            $("#show_Img").css('display','none');
+            $("#imgFile").click();
+        });
+        $("#imgFile").change(function(){
+            $("#Upload_img").html('上传中...');
+            var tmp_path = $("#imgFile").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img").show();
+                            var imgurl = data.url;
+                            $("#res_show_img").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+
+
+
+
+	//上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail2").val() != '' && $("#thumbnail2").val() != null){
+            $("#res_show_img2").show();
+            $("#res_show_img2").html('<img src="'+$("#thumbnail2").val()+'" width="150px">');
+        }
+
+        $("#Upload_img2").click(function (){
+            $("#show_Img2").html('');
+            $("#show_Img2").css('display','none');
+            $("#imgFile2").click();
+        });
+        $("#imgFile2").change(function(){
+            $("#Upload_img2").html('上传中...');
+            var tmp_path = $("#imgFile2").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile2')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img2").show();
+                            var imgurl = data.url;
+                            $("#res_show_img2").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail2").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img2").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img2").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+
+	//上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail3").val() != '' && $("#thumbnail3").val() != null){
+            $("#res_show_img3").show();
+			//alert($("#thumbnail3").val());
+            $("#res_show_img3").html('<img src="'+$("#thumbnail3").val()+'" width="150px">');
+        }
+
+        $("#Upload_img3").click(function (){
+            $("#show_Img3").html('');
+            $("#show_Img3").css('display','none');
+            $("#imgFile3").click();
+        });
+        $("#imgFile3").change(function(){
+            $("#Upload_img3").html('上传中...');
+            var tmp_path = $("#imgFile3").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile3')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img3").show();
+                            var imgurl = data.url;
+                            $("#res_show_img3").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail3").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img3").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img3").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+
+
+	//上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail4").val() != '' && $("#thumbnail4").val() != null){
+            $("#res_show_img4").show();
+            $("#res_show_img4").html('<img src="'+$("#thumbnail4").val()+'" width="150px">');
+        }
+
+        $("#Upload_img4").click(function (){
+            $("#show_Img4").html('');
+            $("#show_Img4").css('display','none');
+            $("#imgFile4").click();
+        });
+        $("#imgFile4").change(function(){
+            $("#Upload_img4").html('上传中...');
+            var tmp_path = $("#imgFile4").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile4')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img4").show();
+                            var imgurl = data.url;
+                            $("#res_show_img4").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail4").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img4").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img4").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+
+
+	//上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail5").val() != '' && $("#thumbnail5").val() != null){
+            $("#res_show_img5").show();
+            $("#res_show_img5").html('<img src="'+$("#thumbnail5").val()+'" width="150px">');
+        }
+
+        $("#Upload_img5").click(function (){
+            $("#show_Img5").html('');
+            $("#show_Img5").css('display','none');
+            $("#imgFile5").click();
+        });
+        $("#imgFile5").change(function(){
+            $("#Upload_img5").html('上传中...');
+            var tmp_path = $("#imgFile5").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile5')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img5").show();
+                            var imgurl = data.url;
+                            $("#res_show_img5").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail5").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img5").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img5").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+  	//上传缩略图
+    $(function (){
+        //如果有图片就显示
+        if($("#thumbnail6").val() != '' && $("#thumbnail6").val() != null){
+            $("#res_show_img6").show();
+            $("#res_show_img6").html('<img src="'+$("#thumbnail6").val()+'" width="150px">');
+        }
+
+        $("#Upload_img6").click(function (){
+            $("#show_Img6").html('');
+            $("#show_Img6").css('display','none');
+            $("#imgFile6").click();
+        });
+        $("#imgFile6").change(function(){
+            $("#Upload_img6").html('上传中...');
+            var tmp_path = $("#imgFile6").val();
+            if(tmp_path != '' && tmp_path != null){
+                var pic = $('#imgFile6')[0].files[0];
+                var fd = new FormData();
+                fd.append('imgFile', pic);
+                $.ajax({
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+                    type:"post",
+                    dataType:'json',
+                    data: fd,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success:function(data){
+                        if(data && data.error == '0'){
+                            $("#res_show_img6").show();
+                            var imgurl = data.url;
+                            $("#res_show_img6").html('<img src="'+imgurl+'" width="150px">');
+                            $("#thumbnail6").val(imgurl);
+                            layer.msg('上传成功');
+                        }else{
+                            layer.msg('上传出错了...');
+                        }
+                        $("#Upload_img6").html('重新上传');
+                    },
+                    error:function (){
+                        $("#Upload_img6").html('重新上传');
+                    }
+                });
+            }
+        });
+    });
+</script>

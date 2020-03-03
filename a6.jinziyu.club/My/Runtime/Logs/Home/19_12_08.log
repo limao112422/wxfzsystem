@@ -1,0 +1,911 @@
+[ 2019-12-08T15:46:26+08:00 ] 183.202.121.26 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.021762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001579s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0593s ]
+SQL: SELECT * FROM `h_user` WHERE `mobile` = '13333333333' LIMIT 1   [ RunTime:0.0345s ]
+NOTIC: [8] Undefined index: nic /www/wwwroot/a6.jinziyu.club/My/Home/Controller/CommonController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575790886 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575790886 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006096s ]
+
+[ 2019-12-08T15:46:27+08:00 ] 183.202.121.26 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+
+[ 2019-12-08T15:46:31+08:00 ] 183.202.121.26 /qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+ERR: 无法加载控制器:Qy
+
+[ 2019-12-08T15:46:31+08:00 ] 183.202.121.26 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2019-12-08T15:46:31+08:00 ] 183.202.121.26 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575790891 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575790891 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009192s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2019-12-08T15:46:37+08:00 ] 42.236.10.117 /qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+ERR: 无法加载控制器:Qy
+
+[ 2019-12-08T15:46:38+08:00 ] 183.202.121.26 /yd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+ERR: 无法加载控制器:Yd
+
+[ 2019-12-08T15:46:38+08:00 ] 183.202.121.26 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+
+[ 2019-12-08T15:46:40+08:00 ] 180.163.220.67 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+
+[ 2019-12-08T15:46:43+08:00 ] 180.163.220.66 /qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+ERR: 无法加载控制器:Qy
+
+[ 2019-12-08T15:46:44+08:00 ] 180.163.220.5 /qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+ERR: 无法加载控制器:Qy
+
+[ 2019-12-08T15:46:45+08:00 ] 180.163.220.5 /yd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+ERR: 无法加载控制器:Yd
+
+[ 2019-12-08T15:46:48+08:00 ] 180.163.220.67 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000430s ]
+
+[ 2019-12-08T15:47:01+08:00 ] 180.163.220.66 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T15:47:04+08:00 ] 180.163.220.4 /yd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+ERR: 无法加载控制器:Yd
+
+[ 2019-12-08T15:47:08+08:00 ] 42.236.10.114 /yd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000405s ]
+ERR: 无法加载控制器:Yd
+
+[ 2019-12-08T15:47:10+08:00 ] 42.236.10.114 /yd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载控制器:Yd
+
+[ 2019-12-08T15:47:11+08:00 ] 183.202.121.26 /index/qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `mobile` = '13444444444' LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: nic /www/wwwroot/a6.jinziyu.club/My/Home/Controller/CommonController.class.php 第 15 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2019-12-08T15:47:16+08:00 ] 180.163.220.66 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T15:47:19+08:00 ] 183.202.121.26 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+
+[ 2019-12-08T15:47:19+08:00 ] 183.202.121.26 /Log/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+NOTIC: [8] Undefined variable: titles /www/wwwroot/a6.jinziyu.club/My/Runtime/Cache/Home/7dadd9f764eff1f6ba13c2542ccf3baa.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2019-12-08T15:47:20+08:00 ] 180.163.220.4 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+
+[ 2019-12-08T15:47:20+08:00 ] 180.163.220.68 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004157s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000176s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000431s ]
+
+[ 2019-12-08T15:47:20+08:00 ] 180.163.220.67 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+
+[ 2019-12-08T15:47:20+08:00 ] 180.163.220.66 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2019-12-08T15:47:20+08:00 ] 180.163.220.66 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T15:47:21+08:00 ] 180.163.220.3 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T16:06:09+08:00 ] 183.202.121.26 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000432s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+
+[ 2019-12-08T16:06:09+08:00 ] 183.202.121.26 /Log/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+NOTIC: [8] Undefined variable: titles /www/wwwroot/a6.jinziyu.club/My/Runtime/Cache/Home/7dadd9f764eff1f6ba13c2542ccf3baa.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2019-12-08T16:06:18+08:00 ] 183.202.121.26 /Log/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+SQL: SHOW COLUMNS FROM `h_admin` [ RunTime:0.0225s ]
+NOTIC: [8] Undefined variable: validate /www/wwwroot/a6.jinziyu.club/My/Home/Controller/LogController.class.php 第 14 行.
+NOTIC: [8] Undefined index: validate /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1128 行.
+SQL: SELECT * FROM `h_admin` WHERE `username` = 'admin' AND `password` = '22666d978f0b0b67d420d416ae7ec363' LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `h_admin_login` [ RunTime:0.0064s ]
+SQL: INSERT INTO `h_admin_login` (`username`,`logintime`,`loginip`) VALUES ('admin','1575792378','183.202.121.26') [ RunTime:0.0126s ]
+SQL: UPDATE `h_admin` SET `lastlogin`='1575792378' WHERE `username` = 'admin' [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019993s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+
+[ 2019-12-08T16:06:19+08:00 ] 183.202.121.26 /Admin/Main_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.092995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2019-12-08T16:06:19+08:00 ] 183.202.121.26 /Admin/js/commonz.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+ERR: 非法操作:js
+
+[ 2019-12-08T16:06:20+08:00 ] 183.202.121.26 /Admin/js/commonz.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+ERR: 非法操作:js
+
+[ 2019-12-08T16:06:27+08:00 ] 183.202.121.26 /Admin/User_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 1509 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `h_user` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 1513 行.
+SQL: SELECT * FROM `h_user` ORDER BY id Desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046369s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2019-12-08T16:06:33+08:00 ] 183.202.121.26 /Admin/Qudao_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+NOTIC: [2048] Declaration of Home\Controller\AdminController::setlogin() should be compatible with Home\Controller\CommonsController::setlogin($id = '', $name = '') /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `h_qudao` [ RunTime:0.0013s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 1650 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `h_qudao` LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: map /www/wwwroot/a6.jinziyu.club/My/Home/Controller/AdminController.class.php 第 1654 行.
+SQL: SELECT * FROM `h_qudao` ORDER BY id Desc LIMIT 0,20   [ RunTime:0.0272s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027064s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027113s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001305s ]
+
+[ 2019-12-08T16:08:29+08:00 ] 120.204.17.71 /index/qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+
+[ 2019-12-08T16:47:34+08:00 ] 106.39.189.156 /index/qy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+
+[ 2019-12-08T16:47:34+08:00 ] 106.39.189.156 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000446s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004432s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2019-12-08T16:47:34+08:00 ] 106.39.189.156 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T16:47:34+08:00 ] 106.39.189.184 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T16:47:35+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2019-12-08T16:47:49+08:00 ] 27.187.83.164 /register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2019-12-08T16:47:50+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+
+[ 2019-12-08T16:47:52+08:00 ] 27.187.83.164 /login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000440s ]
+
+[ 2019-12-08T16:47:52+08:00 ] 27.187.83.164 /Public/static/js/swiper.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+ERR: 无法加载控制器:Public
+
+[ 2019-12-08T16:47:52+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+
+[ 2019-12-08T16:48:05+08:00 ] 27.187.83.164 /Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `mobile` = '13444444444' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: nic /www/wwwroot/a6.jinziyu.club/My/Home/Controller/LoginController.class.php 第 35 行.
+
+[ 2019-12-08T16:48:07+08:00 ] 27.187.83.164 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794587 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794587 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005760s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2019-12-08T16:48:08+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+
+[ 2019-12-08T16:48:11+08:00 ] 27.187.83.164 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794591 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794591 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006387s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000473s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000502s ]
+
+[ 2019-12-08T16:48:14+08:00 ] 27.187.83.164 /Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794594 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794594 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000474s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2019-12-08T16:48:15+08:00 ] 27.187.83.164 /community/text/id/6.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `h_user` SET `textid`=',4,6' WHERE `id` = 2 [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0129s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 6 LIMIT 1   [ RunTime:0.0029s ]
+SQL: UPDATE `h_text` SET `pv`=pv+1 WHERE `Id` = 6 [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_text` WHERE `Id` = 6 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000484s ]
+
+[ 2019-12-08T16:48:15+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+
+[ 2019-12-08T16:48:19+08:00 ] 27.187.83.164 /user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '2'  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `h_text` [ RunTime:0.0010s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in /www/wwwroot/a6.jinziyu.club/My/Home/Controller/UserController.class.php on line 56 and defined /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1797 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1805 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1808 行.
+NOTIC: [8] Undefined variable: where /www/wwwroot/a6.jinziyu.club/Name/Library/Think/Model.class.php 第 1816 行.
+SQL: SELECT * FROM `h_text`  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2019-12-08T16:48:19+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+
+[ 2019-12-08T16:48:28+08:00 ] 27.187.83.164 /user/qrcode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000443s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0458s ]
+SQL: SELECT * FROM `h_user` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024668s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024704s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2019-12-08T16:48:29+08:00 ] 27.187.83.164 /Register/qrcodeimgaaa.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000650s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2019-12-08T16:48:29+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+
+[ 2019-12-08T16:48:29+08:00 ] 27.187.83.164 /Register/qrcodeimg.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000563s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2019-12-08T16:48:39+08:00 ] 27.187.83.164 /user/money.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '2' AND `status` = 1 ORDER BY Id desc  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '2' ORDER BY Id desc  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+NOTIC: [8] Undefined variable: page /www/wwwroot/a6.jinziyu.club/My/Runtime/Cache/Home/3c3244dfab3ce5633da4373ea5a05438.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2019-12-08T16:48:39+08:00 ] 27.187.83.164 /Public/imgs/back.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+
+[ 2019-12-08T16:48:39+08:00 ] 27.187.83.164 /Public/imgs/search.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+
+[ 2019-12-08T16:48:39+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+
+[ 2019-12-08T16:48:43+08:00 ] 27.187.83.164 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794623 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794623 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000466s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+
+[ 2019-12-08T16:48:44+08:00 ] 27.187.83.164 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+
+[ 2019-12-08T16:48:46+08:00 ] 27.187.83.164 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794626 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794626 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006035s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2019-12-08T16:48:48+08:00 ] 27.187.83.164 /Card/shuju.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000439s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = 0 AND `addtime` > 1575794628 ORDER BY addtime Asc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2019-12-08T16:48:49+08:00 ] 27.187.83.164 /index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `h_shuju` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794629 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `h_shuju` WHERE `tuiuser` = '0' AND `status` = 0 AND `addtime` > 1575794629 ORDER BY pay desc LIMIT 0,20   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+

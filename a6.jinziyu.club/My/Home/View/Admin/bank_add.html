@@ -1,0 +1,201 @@
+ <!-- Content Header (Page header) -->
+<section class="content-header">
+	<div>
+		<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+			<li>
+				<a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;">
+				<i class=" fa fa-home">
+				&nbsp;</i>Home</a>
+			</li>
+			<li class="active">网贷列表</li>
+			<li class="active">网贷分类</li>
+		</ol>
+	</div>
+</section>
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-primary">
+				<form class="form-horizontal" style="margin-top:30px" method="POST" action="{:U(GROUP_NAME.'/bank_add')}" enctype="multipart/form-data">
+					<div class="box-body">
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="control-label col-sm-3">姓名</label>
+							<div class="col-sm-6">
+								<input type="text" name="name" class="form-control col-sm-9" value="">
+							</div>
+						</div>					
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="control-label col-sm-3">图片</label>
+							<div class="col-sm-6">
+							  <input type="text" name="img" id="thumbnail" value="" size="30" class="inpMain" />
+
+                <button id="Upload_img" class="btn" type="button">上传</button>
+
+                <div style="display: none;">
+
+                    <input id="imgFile" type="file" name="imgFile" style="display: none;">
+
+                </div>
+
+                <div id="res_show_img" style="display: none;"></div>
+							</div>
+						</div>
+
+					</div>
+				
+					<!-- /.box-body -->
+
+					<div class="box-footer">
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-9">
+								<button type="button" id="ajaxBtn" class="btn btn-primary">添加</button>
+							</div>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$('#paymodel').on('change',function(){
+		var model = $('#paymodel option:selected').val();
+		if(model){
+			$('.paymodel').hide();
+			$('.paymodel').eq(model-1).show();
+		}else{
+			$('.paymodel').hide();
+		}
+		
+	})
+
+</script>
+
+    </div>
+  
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div>
+<script src="__PUBLIC__/js/commonz.js"></script>
+<script>
+	var route = "c=User&a=edit";
+    var href = '';
+	console.log(route);
+    $('.sidebar-menu').find('a').each(function () {
+        $(this).parent('li').removeClass('active');
+        href = $(this).attr('href');
+        if ((href.indexOf(route) != -1)) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.treeview').addClass('active');
+			return false;
+		}
+    });
+
+    $('.dropdown-toggle').click(function (ev) {
+        $(this).find('.fa-angle-down').toggleClass('hidden');
+        $(this).find('.fa-angle-up').toggleClass('hidden');
+    });
+	
+	// 调整默认选择内容
+	$("select").each(function(index, element) {
+		$(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+	});
+</script>
+<script>
+
+    //上传缩略图
+
+    $(function (){
+
+        //如果有图片就显示
+
+        if($("#thumbnail").val() != '' && $("#thumbnail").val() != null){
+
+            $("#res_show_img").show();
+
+            $("#res_show_img").html('<img src="'+$("#thumbnail").val()+'" width="150px">');
+
+        }
+
+
+
+        $("#Upload_img").click(function (){
+
+            $("#show_Img").html('');
+
+            $("#show_Img").css('display','none');
+
+            $("#imgFile").click();
+
+        });
+
+        $("#imgFile").change(function(){
+
+            $("#Upload_img").html('上传中...');
+
+            var tmp_path = $("#imgFile").val();
+
+            if(tmp_path != '' && tmp_path != null){
+
+                var pic = $('#imgFile')[0].files[0];
+
+                var fd = new FormData();
+
+                fd.append('imgFile', pic);
+
+                $.ajax({
+
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json.php",
+
+                    type:"post",
+
+                    dataType:'json',
+
+                    data: fd,
+
+                    cache: false,
+
+                    contentType: false,
+
+                    processData: false,
+
+                    success:function(data){
+
+                        if(data && data.error == '0'){
+
+                            $("#res_show_img").show();
+
+                            var imgurl = data.url;
+
+                            $("#res_show_img").html('<img src="'+imgurl+'" width="150px">');
+
+                            $("#thumbnail").val(imgurl);
+
+                            layer.msg('上传成功');
+
+                        }else{
+
+                            layer.msg('上传出错了...');
+
+                        }
+
+                        $("#Upload_img").html('重新上传');
+
+                    },
+
+                    error:function (){
+
+                        $("#Upload_img").html('重新上传');
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    });
+
+</script>

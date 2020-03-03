@@ -1,0 +1,254 @@
+<h3>
+    {$title}
+</h3>
+    <script src="__PUBLIC__/layui/layui.js"></script>
+<div class="filter">
+    <form action="{:U(GROUP_NAME.'/kashen')}" method="post">
+        <input name="keyword" type="text" class="inpMain" placeholder="搜索：申请人信息" value="{$keyword}" size="20" />
+		/
+		<input name="keyword2" type="text" class="inpMain" placeholder="搜索：推荐人信息" value="{$keyword2}" size="20" />
+		/
+		<input name="keyword3" type="text" class="inpMain" placeholder="搜索：产品名称" value="{$keyword3}" size="20" />
+		/
+		<input name="keyword4" type="text" style="width:100px;" class="inpMain" placeholder="搜索：开始时间" value="{$keyword4}" id="test1">
+		/
+		<input name="keyword5" type="text" style="width:100px;" class="inpMain" placeholder="搜索：结束时间" value="{$keyword5}" id="test2">
+
+        <input name="submit" class="btnGray" type="submit" value="筛选" />
+		<input name="submit" class="btnGray" type="submit" value="导出数据" />
+		<input type="hidden" name="xls" id="thumbnail" value=""/>
+		<input name="file" class="btnGray" id="imgFile" type="file" value="上传图片" />
+		<input name="submit" class="btnGray" type="submit" id="Upload_img" value="导入数据" />
+    </form>
+</div>
+<div id="list">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+                <th width="50" align="center">ID</th>
+                <th width="100" align="center">姓名</th>
+                <th width="100" align="center">身份证号</th>
+                
+                <th width="100">手机号</th>
+                <th width="100">产品名字</th>
+                <th width="100" align="center">产品图片</th>
+				<th width="100" align="center">产品申请金额</th>
+				<th width="100" align="center">产品佣金</th>
+				<th width="100" align="center">二级佣金</th>
+				<th width="100" align="center">三级佣金</th>
+				<th width="100" align="center">推荐人</th>
+                <th width="100" align="center">核实状态</th>
+				<th width="100" align="center">提交时间</th>
+                <th width="100">操作</th>
+            </tr>
+            <volist name="data" id="vo">
+                <tr>
+                    <td align="center">{$vo.id}</td>
+                    <td align="center">{$vo.name}</td>
+                    <td align="center">{$vo.shenno}</td>
+					<td align="center">{$vo.shouji}</td>
+					<td align="center">{$vo.bankname}</td>
+					<td align="center"><img src="{$vo.img}" style="width:100px;height:50px;"></td>
+					<td align="center">{$vo.money}</td>
+					<td align="center">￥{$vo.pay}<!--&nbsp;&nbsp;<span style="color:blue;cursor:pointer;" onclick="changepassaax({$vo.id},{$vo.pay})">修改</span>--></td>
+					<td align="center">￥{$vo.eryong}
+					<td align="center">￥{$vo.sanyong}
+					<?php if($vo['tuiuser']=='admin'){ ?>
+					<td align="center">无</td>
+					<?php }else{ ?>
+					<td align="center">{$vo.nick}|{$vo.tuiuser}</td>
+					<?php } ?>
+
+					<td align="center">
+						<php>if($vo['status']==1){echo "<font color=''>结算成功</font>";}else if($vo['status']==0){echo "待结算";}else if($vo['status']==3){echo "结算成功";}else if($vo['status']==2){echo "订单无效";}</php>
+					</td>
+                    <td align="center">{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+					
+                <td align="center">
+
+                   <!-- <a href="{:U(GROUP_NAME.'/text_edit',array('id'=>$vo['id']))}">编辑</a> |-->
+					<php>if($vo['status']==1){ echo "<font color=''>结算成功</font>";}else if($vo['status']==3 || $vo['status']==2){ echo "<font color=''>无需结算</font>";}else{</php>
+                    <a href="javascript:del('{$vo.name}','{:U(GROUP_NAME.'/heshijine',array('id'=>$vo['id'],'keyword'=>$keyword,'keyword2'=>$keyword2,'keyword3'=>$keyword3,'keyword4'=>$keyword4,'keyword5'=>$keyword5,'p'=>$p))}');" style="display: block;background:#003BB3;color:#FFF;padding:3px 5px;border-radius: 5px;">结算</a>&nbsp;&nbsp;
+					<a href="javascript:del('{$vo.name}','{:U(GROUP_NAME.'/heshijine2',array('id'=>$vo['id'],'keyword'=>$keyword,'keyword2'=>$keyword2,'keyword3'=>$keyword3,'keyword4'=>$keyword4,'keyword5'=>$keyword5,'p'=>$p))}');" style="display: block;background:#003BB3;color:#FFF;padding:3px 5px;border-radius: 5px;">无效</a>
+					<php>}</php>
+
+                </td>
+                </tr>
+            </volist>
+        </table>
+</div>
+<div class="clear"></div>
+<div class="pager">
+    {$page}
+</div>
+</div>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+   //执行一个laydate实例
+  laydate.render({
+    elem: '#test2' //指定元素
+  });
+});
+</script>
+<script>
+    function del(a,jumpurl){
+        layer.confirm(
+                '确定要结算该订单吗?',
+                function (){
+                    window.location.href = jumpurl;
+                }
+        );
+    }
+
+			function changepassaax(uid,a){
+		layer.prompt({title: '请输入修改后的佣金', formType: 0,value:a}, function(pass, index){
+			if(1){
+				$.post(
+					"{:U(GROUP_NAME.'/jiessyongss')}",
+					{act:'1',id:uid,pass:pass},
+					function (data,state){
+						if(state != "success"){
+							layer.msg("网络通讯失败!");
+						}else if(data.status == 1){
+							layer.msg("佣金修改成功!");
+							layer.close(index);
+							location.reload();
+						}else{
+							layer.msg(data.msg);
+						}
+					}
+				);
+			}
+		});
+    }
+</script>
+
+
+<script>
+
+
+    //上传缩略图
+
+
+    $(function (){
+
+
+        //如果有图片就显示
+
+
+
+
+
+
+
+ 
+
+
+        $("#imgFile").change(function(){
+
+
+            //$("#Upload_img").val('上传中...');
+
+
+            var tmp_path = $("#imgFile").val();
+
+
+            if(tmp_path != '' && tmp_path != null){
+
+
+                var pic = $('#imgFile')[0].files[0];
+
+
+                var fd = new FormData();
+
+
+                fd.append('imgFile', pic);
+
+
+                $.ajax({
+
+
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json3.php",
+
+
+                    type:"post",
+
+
+                    dataType:'json',
+
+
+                    data: fd,
+
+
+                    cache: false,
+
+
+                    contentType: false,
+
+
+                    processData: false,
+
+
+                    success:function(data){
+
+
+                        if(data && data.error == '0'){
+
+
+                           // $("#res_show_img").show();
+
+
+                            var imgurl = data.url;
+
+
+                            //$("#res_show_img").html('<img src="'+imgurl+'" width="150px">');
+
+
+                            $("#thumbnail").val(imgurl);
+
+
+                            layer.msg('上传成功');
+
+
+                        }else{
+
+
+                            layer.msg('上传出错了...');
+
+
+                        }
+
+
+                       // $("#Upload_img").val('重新上传');
+
+
+                    },
+
+
+                    error:function (){
+
+
+                       // $("#Upload_img").val('重新上传');
+
+
+                    }
+
+
+                });
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+</script>

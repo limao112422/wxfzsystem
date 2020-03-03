@@ -1,0 +1,12 @@
+[ 2019-11-27T02:48:01+08:00 ] 223.104.14.50 /m.php?m=Member&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+ERR: 无法加载模块:Member
+
+[ 2019-11-27T19:48:34+08:00 ] 223.104.14.50 /m.php?m=Member&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000341s ]
+ERR: 无法加载模块:Member
+

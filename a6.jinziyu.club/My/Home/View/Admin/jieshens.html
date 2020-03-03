@@ -1,0 +1,268 @@
+<h3>
+    {$title}
+</h3>
+<script src="__PUBLIC__/layui/layui.js"></script>
+  <script>
+            function checkAll(){
+                //1.获取编号前面的复选框
+                var checkAllEle = document.getElementById("checkAll");
+                //2.对编号前面复选框的状态进行判断
+                if(checkAllEle.checked==true){
+                    //3.获取下面所有的复选框
+                    var checkOnes = document.getElementsByName("id[]");
+                    //4.对获取的所有复选框进行遍历
+                    for(var i=0;i<checkOnes.length;i++){
+                        //5.拿到每一个复选框，并将其状态置为选中
+                        checkOnes[i].checked=true;
+                    }
+                }else{
+                    //6.获取下面所有的复选框
+                    var checkOnes = document.getElementsByName("id[]");
+                    //7.对获取的所有复选框进行遍历
+                    for(var i=0;i<checkOnes.length;i++){
+                        //8.拿到每一个复选框，并将其状态置为未选中
+                        checkOnes[i].checked=false;
+                    }
+                }
+            }
+        </script>
+<div class="filter">
+    <form action="{:U(GROUP_NAME.'/jieshens')}" method="post">
+      	<select name="keyword2">
+			<option type="text" class="inpMain" placeholder="搜索：渠道商" value="{$keyword2}" size="20">搜索：渠道商</option>
+			<volist name="ck_pros" id="vo">
+			<option type="text" class="inpMain" placeholder="搜索：渠道商" value="{$vo.id}" size="20">{$vo.nick}</option>
+			</volist>
+		</select>
+      	<select name="keyword3">
+			<option type="text" class="inpMain" placeholder="搜索：产品名称" value="{$keyword3}" size="20">搜索：产品名称</option>
+			<volist name="ck_pro" id="vo">
+			<option type="text" class="inpMain" placeholder="搜索：产品名称" value="{$vo.id}" size="20">{$vo.name}</option>
+			</volist>
+		</select>
+         <input name="keyword" type="text" class="inpMain" placeholder="搜索：申请人信息" value="{$keyword}" size="20" />
+		/
+		<input name="keyword4" type="text" style="width:100px;" class="inpMain" placeholder="搜索：开始时间" value="{$keyword4}" id="test1">
+		/
+		<input name="keyword5" type="text" style="width:100px;" class="inpMain" placeholder="搜索：结束时间" value="{$keyword5}" id="test2">
+
+        <input name="submit" class="btnGray" type="submit" value="筛选" />
+		<input name="submit" class="btnGray" type="submit" value="导出数据" />
+		<input type="hidden" name="xls" id="thumbnail" value=""/>
+    </form>
+</div>
+<div id="list">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+               	<th width="50" align="center">  <input type="checkbox" id="checkAll" onclick="checkAll()"/></th>
+                <th width="50" align="center">ID</th>
+                <th width="150" align="center">姓名</th>
+                <th width="100" align="center">芝麻分</th>
+                
+                <th width="80">手机号</th>
+                <th width="80">产品名字</th>
+                <th width="150" align="center">产品图片</th>
+				<th width="150" align="center">推荐人</th>
+				<th width="100" align="center">提交时间</th>
+              
+            </tr>
+             <form method="post" action="{:U(GROUP_NAME.'/jieshens_edit')}">
+            <volist name="data" id="vo">
+                <tr>
+                     <td  align="center"><input type = 'checkbox' name = 'id[]' id = 'checkbox' value = "{$vo.id}" class="checkbox"></td>
+                    <td align="center">{$vo.id}</td>
+                    <td align="center">{$vo.name}</td>
+                    <td align="center">{$vo.zhima_fen}</td>
+					<td align="center">{$vo.shouji}</td>
+					<td align="center">{$vo.bankname}</td>
+					<td align="center"><img src="{$vo.img}" style="width:100px;height:50px;"></td>
+					<?php if($vo['tuiuser']=='admin'){ ?>
+					<td align="center">平台</td>
+					<?php }else{ ?>
+					<td align="center">{$vo.nick}</td>
+					<?php } ?>
+                    <td align="center">{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+					
+               
+                </tr>
+            </volist>
+                  <button type="submit" class="btn btn-default">全部删除</button>
+              </form>
+        </table>
+</div>
+<div class="clear"></div>
+<div class="pager">
+    {$page}
+</div>
+</div>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+   //执行一个laydate实例
+  laydate.render({
+    elem: '#test2' //指定元素
+  });
+});
+</script>
+<script>
+    function del(a,jumpurl){
+        layer.confirm(
+                '确定要结算该订单吗?',
+                function (){
+                    window.location.href = jumpurl;
+                }
+        );
+    }
+
+		function changepassaax(uid,a){
+		layer.prompt({title: '请输入修改后的佣金', formType: 0,value:a}, function(pass, index){
+			if(1){
+				$.post(
+					"{:U(GROUP_NAME.'/jiessyong')}",
+					{act:'1',id:uid,pass:pass},
+					function (data,state){
+						if(state != "success"){
+							layer.msg("网络通讯失败!");
+						}else if(data.status == 1){
+							layer.msg("佣金修改成功!");
+							layer.close(index);
+							location.reload();
+						}else{
+							layer.msg(data.msg);
+						}
+					}
+				);
+			}
+		});
+    }
+</script>
+
+
+<script>
+
+
+    //上传缩略图
+
+
+    $(function (){
+
+
+        //如果有图片就显示
+
+
+
+
+
+
+
+ 
+
+
+        $("#imgFile").change(function(){
+
+
+            //$("#Upload_img").val('上传中...');
+
+
+            var tmp_path = $("#imgFile").val();
+
+
+            if(tmp_path != '' && tmp_path != null){
+
+
+                var pic = $('#imgFile')[0].files[0];
+
+
+                var fd = new FormData();
+
+
+                fd.append('imgFile', pic);
+
+
+                $.ajax({
+
+
+                    url:"__PUBLIC__/main/js/kindeditor/php/upload_json3.php",
+
+
+                    type:"post",
+
+
+                    dataType:'json',
+
+
+                    data: fd,
+
+
+                    cache: false,
+
+
+                    contentType: false,
+
+
+                    processData: false,
+
+
+                    success:function(data){
+
+
+                        if(data && data.error == '0'){
+
+
+                           // $("#res_show_img").show();
+
+
+                            var imgurl = data.url;
+
+
+                            //$("#res_show_img").html('<img src="'+imgurl+'" width="150px">');
+
+
+                            $("#thumbnail").val(imgurl);
+
+
+                            layer.msg('上传成功');
+
+
+                        }else{
+
+
+                            layer.msg('上传出错了...');
+
+
+                        }
+
+
+                       // $("#Upload_img").val('重新上传');
+
+
+                    },
+
+
+                    error:function (){
+
+
+                       // $("#Upload_img").val('重新上传');
+
+
+                    }
+
+
+                });
+
+
+            }
+
+
+        });
+
+
+    });
+
+
+</script>

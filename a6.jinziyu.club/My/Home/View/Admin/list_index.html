@@ -1,0 +1,167 @@
+
+<link rel="stylesheet" href="__PUBLIC__/css/switch.css">
+
+<section class="content-header">
+  
+<div>
+	<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+		<li><a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;"><i class=" fa fa-home"></i>&nbsp;Home</a></li>
+		<li class="active">网贷列表</li>
+	</ol>
+</div>
+</section>
+
+<section class="content">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title"></h3>
+				<div class="box-tools" style="left:10px;">
+					<form class="form-inline" method="post"  action="{:U(GROUP_NAME.'/list_index')}">
+						<div class="form-group">
+							<select name="keyword2" class="form-control" default="">
+								<option value="">状态</option>
+								<option value="1">上架</option>
+								<option value="2">下架</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<div class="input-group input-group-md" style="width: 250px;">
+								<input type="text" name="keyword" class="form-control pull-right" placeholder="网贷名称" value="">
+								<div class="input-group-btn">
+									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+						</div>
+                        <php>if($gid==1){</php>	
+						<div class="form-group">
+								<a href="{:U(GROUP_NAME.'/list_add')}" class="btn btn-success" style="margin-left:10px;">添加网贷</a>
+							</div>	
+                      <php>}</php>
+                  </form>
+				</div>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				<table class="table table-bordered table-hover table-striped text-center">
+					<tbody>
+						<tr>
+							<th>ID</th>
+							<th>图片</th>
+							<th>标题</th>
+							
+                            <th>佣金</th>
+                            <th>结算方式</th>
+							<th width="200">甲方后台地址</th>
+							<th>甲方后台账号</th>
+							<th>甲方后台密码</th>
+							<th>平台备注</th>
+	
+							<th>上下架</th>
+                           <php>if($gid==1){</php>	
+							<th width="200">操作</th>
+                          	<php>}</php>
+						</tr>
+                        <foreach name="data" item="vo">
+						<tr>
+                           
+								<td>{$vo.id}</td>
+								<td><img src="{$vo.img}" style="width:50px;height:50px;border-radius:5px;" /></td>
+								<td>{$vo.name}</td>
+                          		 <td>{$vo.pay}</td>
+                          <td>
+                          <php>if($vo['jiesuan']==1){echo '日结';}else if($vo['jiesuan']==2){echo '周结';}else {echo'月结';}</php>
+						</td>
+                         
+								<td>{$vo.dz}</td>
+								<td>{$vo.zh}</td>
+								<td>{$vo.mm}</td>
+		
+								<td>{$vo.bz}</td>
+								<td><span style="color:#f39c12">{$vo.type}</span></td>
+							 <php>if($gid==1){</php>	
+                          		<td>
+                                  	<a href="{:U(GROUP_NAME.'/list_edit',array('id'=>$vo['id']))}"  class="cannel_vip btn bg-maroon margin"  style="background-color:#00a65a !important">
+									编辑
+									</a>	
+									<a href="javascript:delCat('{$vo.name}','{:U(GROUP_NAME.'/list_del',array('id'=>$vo['id']))}')"  class="cannel_vip btn bg-maroon margin">
+									<i class="fa fa-times"></i>删除
+									</a>								
+                          		</td>
+                          	<php>}</php>
+							</tr>
+                  	</foreach>
+                  </tbody>
+				</table>
+			</div>
+			<!-- /.box-body -->
+			<div class="page">{$page}</div>
+		</div>
+	</div>
+</div>
+</section>
+<script>
+	function clickCheckbox(id,ob , field){
+		$.post("/m.php?m=Member&c=Goods&a=setStatus",{id:id,field:field},function(d){
+			if(d){
+				if($(ob).find(".switch-off").length>0){
+					$(ob).find(".switch-animate").removeClass('switch-off');
+					$(ob).find(".switch-animate").addClass('switch-on');
+				}else{
+					$(ob).find(".switch-animate").removeClass('switch-on');
+					$(ob).find(".switch-animate").addClass('switch-off');
+				}
+			}else{
+				layer.msg('请求失败！');
+			}
+		});
+	}
+	
+</script>
+<div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+
+<script src="__PUBLIC__/js/commonz.js"></script>
+<script>
+	var route = "c=Goods&a=loan";
+    var href = '';
+	console.log(route);
+    $('.sidebar-menu').find('a').each(function () {
+        $(this).parent('li').removeClass('active');
+        href = $(this).attr('href');
+        if ((href.indexOf(route) != -1)) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.treeview').addClass('active');
+			return false;
+		}
+    });
+
+    $('.dropdown-toggle').click(function (ev) {
+        $(this).find('.fa-angle-down').toggleClass('hidden');
+        $(this).find('.fa-angle-up').toggleClass('hidden');
+    });
+	
+	// 调整默认选择内容
+	$("select").each(function(index, element) {
+		$(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+	});
+</script>
+<script>
+
+    function delCat(name,jumpurl){
+
+        layer.confirm(
+
+                '确定要删除自由块:['+name+']吗?',
+
+                function (){
+
+                    window.location.href = jumpurl;
+
+                }
+
+        );
+
+    }
+
+</script>

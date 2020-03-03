@@ -1,0 +1,44 @@
+<header class="main-header">
+  <a href="{:U(GROUP_NAME.'/Main_index')}" class="logo">
+    <span class="logo-mini"><b>后</b>台</span>
+    <span class="logo-lg">
+      <img src="__PUBLIC__/css/img/logo.png">
+      <b>{:C('cfg_sitetitle')}</b>
+    </span>
+
+  </a>
+  <nav class="navbar navbar-static-top">
+    <a href="{:U(GROUP_NAME.'/Main_index')}" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu">
+          <a href="{:U(GROUP_NAME.'/Main_index')}" class="user-panel dropdown-toggle" data-toggle="dropdown" style="height: 50px; display: flex;">
+            <img src="__PUBLIC__/css/img/avatar2.png" class="user-image" alt="User Image">
+            <span class="hidden-xs">{:session('admin_name')} </span>
+            <span>
+              <i class="fa fa-angle-down"></i>
+              <i class="fa fa-angle-up hidden"></i>
+            </span>
+          </a>
+          <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close" style="width: 150px;">
+            <!--li>
+              <a href="{:U(GROUP_NAME.'/Admin_chagemypass')}"><i class="fa fa-fw fa-key"></i> 修改密码</a>
+            </li-->
+            <li class="divider"></li>
+            <li class="divider"></li>
+            <li>
+              <a href="{:U(GROUP_NAME.'/logout')}">
+                <i class="fa fa-fw fa-power-off"></i> 安全退出
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+      </ul>
+    </div>
+    <b class="wechat">管理后台</b>
+  </nav>
+</header>

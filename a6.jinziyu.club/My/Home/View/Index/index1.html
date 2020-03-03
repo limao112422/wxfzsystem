@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>{:C('cfg_sitename')}</title>
+
+	<meta name="keywords" content="{:C('cfg_sitekeywords')}" />
+	<meta name="description" content="{:C('cfg_sitedescription')}" />
+
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<!-- head 中 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.1/css/jquery-weui.min.css">
+	<link rel="stylesheet" type="text/css" href="/Public/static/jcs/main.css">
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/fontawesome/4.4.0/css/font-awesome.min.css">
+	<script src="/Public/static/jcs/jquery1.42.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Public/static/jcs/jquery.SuperSlide.2.1.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Public/static/jcs/TouchSlide.1.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Public/layer/mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+
+<div id="app">
+	
+<style>
+	        input::-webkit-input-placeholder{
+            color:#dcdcdc;
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color:#dcdcdc;
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color:#dcdcdc;
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color:#dcdcdc;
+        }
+</style>
+<div class="weui-search-bar" id="searchBar" style="position: fixed;top: 0;left: 0;right: 0;margin: 0 auto;max-width: 640px;z-index: 99;background: #dc4924;">
+  <form class="weui-search-bar__form" style="background: none;" action="{:U('card/decardlist')}">
+    <div class="weui-search-bar__box" style="background: #dc4924;">
+      <i class="weui-icon-search" style="color: #fff;"></i>
+      <input type="search" class="weui-search-bar__input" id="searchInput" name="pc"placeholder="请输入贷款金额" style="color: #fff;" required="" name="search">
+      <a href="javascript:" class="weui-icon-clear" id="searchClear" style="color: #fff;"></a>
+    </div>
+    <label class="weui-search-bar__label" id="searchText" style="background: #ec6c4b;border-radius: 20px;">
+      <i class="weui-icon-search" style="font-size: 16px;color: #fff;"></i>
+      <span style="color: #fbf9f9; font-size: 12px;">请输入贷款金额</span>
+    </label>
+  </form>
+  <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel" style="color: #fff;">取消</a>
+</div>
+
+
+<div style="height: 44px;"></div>
+				<!-- banner Start ================================ -->
+			<div id="focus" class="focus">
+				<div class="hd">
+					<ul></ul>
+				</div>
+				<div class="bd">
+					<ul>
+						<volist name="lun" id="v">
+							<li><a href="{$v.url}"><img _src="{$v.img}" src="{$v.img}" /></a></li>
+						</volist>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#focus",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"left", 
+					autoPlay:true,//自动播放
+					autoPage:true, //自动分页
+					switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+				});
+			</script>
+			<!-- banner End ================================ -->
+
+
+
+
+
+		<div class="txtScroll-top white">
+			<div class="bd">
+				<ul class="infoList">
+						<li class="clearfix"><a href="#"><img src="/Public/static/images/top.png" alt=""><span>{:C('cfg_gg1')}</span></a></li>
+					<li class="clearfix"><a href="#"><img src="/Public/static/images/top.png" alt=""><span>{:C('cfg_gg2')}</span></a></li>
+					<li class="clearfix"><a href="#"><img src="/Public/static/images/top.png" alt=""><span>{:C('cfg_gg3')}</span></a></li>	  
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			jQuery(".txtScroll-top").slide({mainCell:".bd ul",autoPage:true,effect:"top",autoPlay:true,easing:"easeOutCirc",delayTime:700});
+		</script>
+
+
+
+	
+		<div class="weui-flex nav white">
+			   <volist name="data" id="vo">
+          	<div class="weui-flex__item">
+				<a href="{:U('card/decardlist',array('id'=>$vo['id']))}">
+					<img src="{$vo.img}" alt="">
+					<p>{$vo.name}</p>
+				</a>
+			</div>
+			   </volist>
+	    </div>
+
+		<div class="hot-nav white">
+			<p>热门产品</p>
+		</div>
+
+
+		<p class="tip">以下优选产品，申请三家以上保证放款。</p>
+
+
+
+		<div class="pro">
+
+			<volist name="list" id="v">
+				<div class="pro_list clearfix">
+					<a href="{:U('/loan/read',array('id'=>$v['id']))}">
+						<div class="lf"><img src="{$v.img}" alt="{$v.name}"></div>
+						<div class="rg">
+							<p class="p1 clearfix"><span>{$v.name}</span><span><?php if($v['jiesuan']){echo $v['jiesuan'];}else{echo '-';}?></span></p>
+							<p class="p2 clearfix"><span>可借额度：</span><span>{$v.price}元</span></p>
+							<p class="p3 clearfix"><span>参考：利率{$v.red}%</span><span>{$v.member}人已申请</span></p>
+						</div>
+					</a>
+				</div>
+			</volist>
+			
+		</div>
+	
+		<a href="{:U('/card/decardlist')}" class="show-more rad">查看更多产品</a>
+
+	<div style="height: 2.6rem;background: #f7f5f5;"></div>
+
+
+  <div class="weui-tabbar" style="position: fixed;max-width: 640px;">
+    <a href="/" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+      	<i class="fa fa-home red"></i>
+      </div>
+      <p class="weui-tabbar__label red">首页</p>
+    </a>
+     <!--a href="{:U('/card/decardlist')}" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+      	<i class="fa fa-rmb"></i>      	
+      </div>
+      <p class="weui-tabbar__label">贷款</p>
+    </a>
+    <a href="{:U('/community')}" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+      	<i class="fa fa-file-text-o"></i>      	
+      </div>
+      <p class="weui-tabbar__label">资讯</p>
+    </a-->
+    <a href="{:U('/user')}" class="weui-tabbar__item">
+      <div class="weui-tabbar__icon">
+      	<i class="fa fa-user"></i>      	
+      </div>
+      <p class="weui-tabbar__label">我的</p>
+    </a>
+  </div>
+</div>
+
+
+
+</div>
+
+</body>
+<!-- body 最后 -->
+<script src="/Public/static/jcs/main.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+</html>

@@ -1,0 +1,53 @@
+<h3>
+
+<a href="{:U(GROUP_NAME.'/User_index')}" class="actionBtn">
+用户列表
+
+    </a>
+    {$title}
+
+</h3>
+
+<div id="list">
+
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+
+            <tr>
+
+                <th width="100" align="center">产品ID</th>
+				<th width="100" align="left">产品名字</th>
+  			<th width="100" align="left">登入ip</th>
+                <th width="100" align="left">注册时间</th>
+
+
+            </tr>
+
+            <volist name="list" id="vo">
+
+                <tr>
+
+                    <td align="center">{$vo.chanid}</td>
+					<td>{$vo.channame}</td>
+					<td>{$vo.ip}</td>
+                    <td align="center">{$vo.addtime|date='Y-m-d',###}</td>
+					
+
+					
+           
+
+                </tr>
+
+            </volist>
+
+        </table>
+
+</div>
+
+<div class="clear"></div>
+
+<div class="pager">
+
+    {$page}
+
+</div>
+

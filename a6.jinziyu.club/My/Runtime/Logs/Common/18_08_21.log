@@ -1,0 +1,42 @@
+[ 2018-08-21T10:27:43+08:00 ] 39.90.254.30 /web/index.php?c=site&a=entry&m=ewei_shopv2&do=web&r=order.list.status0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载模块:Ewei_shopv2
+
+[ 2018-08-21T10:29:12+08:00 ] 39.90.254.30 /web/index.php?c=site&a=entry&m=ewei_shopv2&do=web&r=order.list.status0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+ERR: 无法加载模块:Ewei_shopv2
+
+[ 2018-08-21T10:29:13+08:00 ] 39.90.254.30 /web/index.php?c=site&a=entry&m=ewei_shopv2&do=web&r=order.list.status0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+ERR: 无法加载模块:Ewei_shopv2
+
+[ 2018-08-21T10:29:15+08:00 ] 39.90.254.30 /web/index.php?c=site&a=entry&m=ewei_shopv2&do=web&r=order.list.status0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+ERR: 无法加载模块:Ewei_shopv2
+
+[ 2018-08-21T11:10:04+08:00 ] 39.90.254.30 /app/index.php?i=2&c=entry&op=register&do=index&m=xuan_mixloan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+ERR: 无法加载模块:Xuan_mixloan
+
+[ 2018-08-21T11:10:09+08:00 ] 14.116.141.126 /app/index.php?i=1&c=entry&m=ewei_shopv2&do=mobile&r=goods.detail&id=247&mid=9402&posterid=7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+ERR: 无法加载模块:Ewei_shopv2
+
+[ 2018-08-21T12:31:46+08:00 ] 58.247.212.55 /app/index.php?i=2&c=entry&op=salary&do=vip&m=xuan_mixloan
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+ERR: 无法加载模块:Xuan_mixloan
+

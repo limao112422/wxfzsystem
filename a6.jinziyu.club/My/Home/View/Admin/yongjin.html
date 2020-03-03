@@ -1,0 +1,139 @@
+<h3>
+    {$title}
+</h3>
+<div class="filter">
+    <form action="{:U(GROUP_NAME.'/yongjin')}" method="post">
+        <input name="keyword" type="text" placeholder="搜索：姓名/手机号" class="inpMain" value="{$keyword}" size="20" />
+		/
+		<input name="keyword4" type="text" style="width:100px;" class="inpMain" placeholder="搜索：开始时间" value="{$keyword4}" id="test1">
+		/
+		<input name="keyword5" type="text" style="width:100px;" class="inpMain" placeholder="搜索：结束时间" value="{$keyword5}" id="test2">
+        <input name="submit" class="btnGray" type="submit" value="筛选" />
+		<input name="submit" class="btnGray" type="submit"  value="导出数据" />
+    </form>
+</div>
+<div id="list">
+        <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+            <tr>
+                <th width="50" align="center">ID</th>
+                <th width="150" align="center">推广者</th>
+                <th width="100" align="center">分成说明</th>
+                <th width="100" align="center">分成产品</th>
+                <th width="80">金额</th>
+                <th width="150" align="center">创建时间</th>
+            </tr>
+            <volist name="data" id="vo">
+                <tr>
+                    <td align="center">{$vo.id}</td>
+                    <td align="center">{$vo.nick}|{$vo.user}</td>
+                    <td align="center">{$vo.text}</td>
+					<td align="center">{$vo.chantit}</td>
+					<td align="center">{$vo.money}</td>
+                    <td align="center">{$vo.addtime|date='Y-m-d H:i:s',###}</td>
+					
+                </tr>
+            </volist>
+        </table>
+</div>
+<div class="clear"></div>
+<div class="pager">
+    {$page}
+</div>
+</div>
+<script src="__PUBLIC__/layui/layui.js"></script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+   //执行一个laydate实例
+  laydate.render({
+    elem: '#test2' //指定元素
+  });
+});
+</script>
+<script>
+    function del(num,jumpurl){
+        layer.confirm(
+                '确定要删除订单:'+num+'吗?',
+                function (){
+                    window.location.href = jumpurl;
+                }
+        );
+    }
+    /*function showbank(bankname,banknum){
+  		layer.alert(
+  			'打款银行:' + bankname + "<br>" + '银行卡号:' + banknum,
+  			{
+	    		skin: 'layui-layer-lan',
+	    		closeBtn: 0,
+	    		anim: 4
+  			}
+  		);
+    }*/
+    function changestatus(ordernum,oid){
+    	$("#changestatus_span").html(ordernum);
+    	$("#payorderid").val(oid);
+		layer.open({
+		  	type: 1,
+		  	skin: 'layui-layer-rim', //加上边框
+		  	area: ['420px', '265px'], //宽高
+		  	content: $("#changestatus_div").html()
+		});
+    }
+    function savestatus(){
+    	var id = $("#payorderid").val();
+    	var status = $('input:radio[name="status"]:checked').val();
+    		$.post(
+    			"{:U(GROUP_NAME.'/Payorder/changestatus')}",
+    			{id:id,status:status},
+    			function(data,state){
+    				if(data.status == 1){
+    					layer.msg("保存成功!");
+    					setTimeout(function(){
+    						window.location.href = window.location.href;
+    					},2000);
+    				}else if(data.status == 0){
+                        layer.msg("请勿重复操作!");
+                        setTimeout(function(){
+                            window.location.href = window.location.href;
+                        },2000);
+                    }
+
+    			}
+    		);
+    }
+</script>
+<div style="display: none;" id="changestatus_div">
+    <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+        <tr>
+            <td width="100" align="right">订单号</td>
+            <td>
+                <span id="changestatus_span"></span>
+                <input type="hidden" id="payorderid" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">状态</td>
+            <td>
+                <label>
+                <label>
+                    <input type="radio" name="status" value="1"  checked="checked" >
+                    打款成功
+                </label>
+                    <input type="radio" name="status" value="0"  >
+					支付失败
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" onclick="savestatus();" class="btn" value="提交" />
+            </td>
+        </tr>
+    </table>
+</div>

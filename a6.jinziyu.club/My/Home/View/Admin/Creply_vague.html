@@ -1,0 +1,183 @@
+<link href="__PUBLIC__/css/select2.min.css" rel="stylesheet" />
+<script src="__PUBLIC__/js/select2.min.js"></script>
+<script src="__PUBLIC__/layui/layui.js"></script>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+	<div>
+		<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+			<li>
+				<a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;">
+				<i class=" fa fa-home">
+				&nbsp;</i>Home</a>
+			</li>
+			<li class="active">网贷信息</li>
+			<li class="active">模糊核对</li>
+		</ol>
+	</div>
+</section>
+<style>
+	.searchCount{
+	    display: block;
+		height: 40px;
+		line-height: 40px;
+		float: right;
+		color: #f39c12;
+		text-decoration: underline;
+		cursor:pointer;
+	}
+</style>
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box box-primary">
+				<form class="form-horizontal" style="margin-top:30px" method="POST" action="{:U(GROUP_NAME.'/Creply_vague')}" enctype="multipart/form-data">
+					<div class="box-body">
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="control-label col-sm-3">核对机构</label>
+							<div class="col-sm-6">
+								<select class="singleSelect form-control" name="keyword3" id="gid">
+									<option value="">请选择</option>
+                                    <volist name="ck_pro " id="vo">
+                                  		<option value="{$vo.id}" <?php if($vo['id']==$keyword3){echo "selected";} ?>>{$vo.name}</option>
+                                      	
+                                   </volist>
+								</select>
+								<p class="help-block help-block-error col-sm-7 col-xs-10"></p>
+							</div>
+						</div>					
+
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="control-label col-sm-3">核对日期</label>
+							<div class="col-sm-6">
+									<input name="keyword4" type="text" style="width:100px;" class="inpMain" placeholder="搜索：开始时间" value="{$keyword4}" id="test1">
+		/
+		<input name="keyword5" type="text" style="width:100px;" class="inpMain" placeholder="搜索：结束时间" value="{$keyword5}" id="test2">
+							</div>
+						</div>					
+
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="control-label col-sm-3">核对比例</label>
+							<div class="col-sm-6">
+								<input type="text" name="bl" class="form-control col-sm-9" value="" style="width:70%">
+								
+                              	<input name="submit"type="submit" value="查看总站" class="btn btn-primary" style="width:20%">{$count}
+								<p class="help-block help-block-error col-sm-7 col-xs-10">请先查看总站申请量后输入大于0，小于1的数值</p>
+							</div>
+						</div>
+
+					</div>
+				
+					<!-- /.box-body -->
+					<div class="box-footer">
+							<div class="form-group">
+								<div class="col-sm-offset-3 col-sm-9">
+										<input name="submit" type="submit" value="确定核对" class="btn btn-primary" style="width:70%">
+								</div>
+							</div>
+						</div>					
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+
+	$(function(){
+		$('.singleSelect').select2();
+	});
+	
+	
+	//查看总站总申请量
+	function searchCount(){
+		var gid = $('#gid option:selected').val();
+		var times = $('#times').val();
+		if(gid == ""){
+			layer.msg('请选择核对机构！');
+			return false;
+		}
+		if(times == ""){
+			layer.msg('请选择核对日期！');
+			return false;
+		}
+		$.post("/m.php?m=Member&c=Creply&a=searchCount",{gid:gid,times:times},function(d){
+			if(d){
+				if(d){
+					layer.alert(d.info);
+				}else{
+					layer.msg(d.info);
+				}
+			}else{
+				layer.msg("请求失败！");
+			}
+		})
+	}
+	
+	$.fn.datetimepicker.dates['zh-CN'] = {
+		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+		daysShort: ["日", "一", "二", "三", "四", "五", "六", "日"],
+		daysMin: ["日", "一", "二", "三", "四", "五", "六", "日"],
+		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		monthsShort: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
+		meridiem: ["上午", "下午"],
+		today: "今天"
+	};
+
+	$('.reservationtime').datetimepicker({
+		format: 'yyyy-mm-dd',
+		language: 'zh-CN',
+		weekStart: 1,
+		todayBtn: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		showMeridian: 1
+	});
+
+</script>
+
+    </div>
+  
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div>
+<script src="__PUBLIC__/js/commonz.js"></script>
+<script>
+	var route = "c=Creply&a=vague";
+    var href = '';
+	console.log(route);
+    $('.sidebar-menu').find('a').each(function () {
+        $(this).parent('li').removeClass('active');
+        href = $(this).attr('href');
+        if ((href.indexOf(route) != -1)) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.treeview').addClass('active');
+			return false;
+		}
+    });
+
+    $('.dropdown-toggle').click(function (ev) {
+        $(this).find('.fa-angle-down').toggleClass('hidden');
+        $(this).find('.fa-angle-up').toggleClass('hidden');
+    });
+	
+	// 调整默认选择内容
+	$("select").each(function(index, element) {
+		$(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+	});
+</script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+   //执行一个laydate实例
+  laydate.render({
+    elem: '#test2' //指定元素
+  });
+});
+</script>

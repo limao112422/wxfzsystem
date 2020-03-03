@@ -1,0 +1,281 @@
+<link rel="stylesheet" href="__PUBLIC__/css/switch.css">
+<link href="__PUBLIC__/css/select2.min.css" rel="stylesheet" />
+<script src="__PUBLIC__/js/select2.min.js"></script>
+<section class="content-header">
+<div>
+	<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+		<li><a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;"><i class=" fa fa-home"></i> Home</a></li>
+		<li class="active">下单员信息</li>
+	</ol>
+</div>
+</section><!-- Main content --><section class="content">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header" style="min-height: 35px;">
+				<h3 class="box-title"></h3>
+				<div class="box-tools" style="left:10px;">
+					<form class="form-inline" method="post" action="{:U(GROUP_NAME.'/Qudao_index')}">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" name="keyword" class="form-control" style="width:120px;" placeholder="手机号" value="{$keyword}">
+									<div class="input-group-btn">
+									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+								</div>	
+                          </div>
+							
+						</div>
+						
+			
+					</form>
+				</div>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				<table class="table table-bordered table-hover table-striped text-center" style="font-size: 14px;">
+					<tbody>
+					<tr>
+						<th>
+							<label>
+								<input id="checkAll" type="checkbox" value="1" style="vertical-align: middle;margin: 0 2px 2px 0;">全选
+							</label>
+						</th>
+						<th>用户ID</th>
+						<th>姓名</th>
+						<th>电话</th>
+                      	<th>账户余额</th>
+						<th>状态</th>
+						<th>注册时间</th>
+					
+						<th width="300">操作</th>
+					</tr>
+					<tr>
+                    <form class="form-inline" method="post" action="{:U(GROUP_NAME.'/Qudao_del')}">
+                      		<div class="form-group" style="float:left">
+							<a href="{:U(GROUP_NAME.'/Qudao_add')}" class="btn btn-success" style="margin-left:10px;">添加用户</a>
+						</div>	
+						<div class="form-group">
+				<input type="submit" name="submit" value="删除用户"  class="btn bg-maroon" style="margin-left:10px;">
+						</div>
+                       	<volist name="list" id="vo">
+							<td>
+								<input type="checkbox" class="cheks" name="id[]" style="width:auto;" value="{$vo.id}">
+							</td>
+						  <th>{$vo.id}</th>
+                          <th>{$vo.nick}</th>
+          				  <td>{$vo.mobile}</td>
+          				  <th>{$vo.price}</th>
+       
+         
+						   <td><?php if($vo['vip']==1) { 
+				echo '正常'; }
+               else { 
+				echo '禁用';}
+				?>
+             </td>
+							   <td>{$vo.reg_time|date='Y-m-d',###}</td>
+						
+							<td style="text-align:left">	
+								<!--a href="javascript:;" onclick="Baoji(437,2);" class="btn btn-danger">
+										<i class="fa fa-align-justify"></i>标记用户
+									</a-->	
+								<a href="javascript:delCat('{$vo.nick}','{:U(GROUP_NAME.'/Qudao_del',array('Id'=>$vo['id']))}')"   class="cannel_vip btn bg-maroon margin">
+									<i class="fa fa-times"></i>删除
+								</a>
+                                <a href="{:U(GROUP_NAME.'/Qudao_edit',array('id'=>$vo['id']))}"  class="cannel_vip btn bg-maroon margin" style="background:#00a65a !important">
+									编辑
+								</a>
+                           
+                               <a href="javascript:changeqdpass('{$vo.id}');"  class="cannel_vip btn bg-maroon margin" style="background:#666 !important">
+									修改密码
+								</a>
+                                 <br>
+                              <a href="javascript:changecz('{$vo.id}');"  class="cannel_vip btn bg-maroon margin" style="background:blue !important">
+									充值金额
+								</a>
+							</td>
+						</tr>		
+                  	</volist>
+                   </form>
+                  </tbody>
+				</table>
+			</div>
+			<!-- /.box-body -->
+			<div class="page">{$page}</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<style>
+	.do-txt{
+		display:none;
+	}
+	.do-txt .txts span{
+		
+	}
+	.do-txt .txts{
+		padding:20px 10px 5px;
+		position: relative;
+		display:flex;
+	}
+	.do-txt .txts select{
+		border: 1px solid #ddd;
+		padding: 2px 10px;
+	}
+	.do-txt button{
+		width: 50%;
+		margin: 30px 25%;
+		height: 35px;
+		border: none;
+		background: #f0882c;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 15px;
+		cursor:pointer;
+	}
+	.layui-layer{
+		z-index:999!important;
+	}
+	.layui-layer-shade{
+		z-index:99!important;
+	}
+</style>
+
+<script>
+
+	$(function(){
+		$('.singleSelect').select2();
+	
+		var $choose = $(".cheks");
+		 //全选
+		$("#checkAll").click(function(){
+			if($(this).prop('checked')){
+				$choose.each(function(){
+					$(this).prop("checked",true);
+				});
+			}else{
+				$choose.each(function(){
+					$(this).prop("checked",false);
+				});
+			}
+		});
+	});
+
+	
+</script>
+
+    </div>
+  
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div>
+<script src="__PUBLIC__/js/commonz.js"></script>
+
+<script>
+
+    function delCat(name,jumpurl){
+
+        layer.confirm(
+
+                '确定要删除自由块:['+name+']吗?',
+
+                function (){
+
+                    window.location.href = jumpurl;
+
+                }
+
+        );
+
+    }
+function changeqdpass(uid){
+
+		layer.prompt({title: '输入新密码，并确认', formType: 1}, function(pass, index){
+
+			if(pass == '' || pass == null){
+
+				layer.msg('密码不能为空!');
+
+			}else if(pass.length < 6){
+
+				layer.msg("密码长度不能小于6位!");
+
+			}else{
+
+				$.post(
+
+					"{:U(GROUP_NAME.'/changeqdpass')}",
+
+					{id:uid,pass:pass},
+
+					function (data,state){
+
+						if(state != "success"){
+
+							layer.msg("网络通讯失败!");
+
+						}else if(data.status == 1){
+
+							layer.msg("密码修改成功!");
+
+							layer.close(index);
+
+						}else{
+
+							layer.msg(data.msg);
+
+						}
+
+					}
+
+				);
+
+			}
+
+		});
+
+    }
+  function changecz(uid){
+
+		layer.prompt({title: '输入金额，并确认', formType: 3}, function(pass, index){
+
+			if(pass == '' || pass == null){
+
+				layer.msg('金额不能为空!');
+
+			}else{
+
+				$.post(
+
+					"{:U(GROUP_NAME.'/changecz')}",
+
+					{id:uid,pass:pass},
+
+					function (data,state){
+
+						if(state != "success"){
+
+							layer.msg("网络通讯失败!");
+
+						}else if(data.status == 1){
+
+							layer.msg("充值成功!");
+
+							layer.close(index);
+
+						}else{
+
+							layer.msg(data.msg);
+
+						}
+
+					}
+
+				);
+
+			}
+
+		});
+
+    }
+</script>

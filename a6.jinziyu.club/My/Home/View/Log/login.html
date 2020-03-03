@@ -1,0 +1,64 @@
+{__NOLAYOUT__}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache"> 
+<meta http-equiv="Expires" content="0"> 
+<title>后台登录 - {:C('cfg_sitename')} </title>
+<link href="__PUBLIC__/home/layui/css/layui.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/admin/login/css/login.css" type="text/css" rel="stylesheet"> 
+ <style>
+   .message{
+   		background:#fff;
+        margin:0;
+        padding:10px;
+        font-size:25px;
+       color:#000;
+   }
+   .login{
+   		height:350px;
+       width:350px;
+   }
+   input{
+    	margin-bottom:20px;
+   }
+   input:nth-child(1){
+   		margin-top:40px;
+   }
+  </style>
+</head> 
+<body style="background:url('/Public/image/abc.jpg') 0 0 no-repeat;background-size:100% 100%"> 
+
+<div class="login">
+    <div class="message">{:C('cfg_sitename')}-管理登录</div>
+    <form method="post" action="login">
+		<input name="username" placeholder="用户名" required="" type="text">
+		
+		<input name="password" placeholder="密码" required="" type="password">
+		
+		<input value="登录" style="width:100%;" type="submit">
+	
+	</form>
+
+</div>
+
+<div class="copyright">© {:C('cfg_sitename')} by <a href="{:C('cfg_sitename')}" target="_blank"></a></div>
+
+</body>
+<script src="__PUBLIC__/home/layui/layui.js"></script>
+<script>
+	var t="{$titles}";
+	var u={$u};
+	if(u==1){
+		layui.use('layer', function(){
+		  var layer = layui.layer;
+		  
+		  layer.msg(t, {icon: 5});
+		  console.log(t);
+		});
+	}
+
+</script>
+</html>

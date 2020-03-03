@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>产品列表</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Public/css/frozen.css">
+<link rel="stylesheet" href="/Public/css/swiper.min.css">
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>  
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+<script src="/Public/css/swiper.min.js"></script>
+<link rel="stylesheet" href="/Public/css/index.css">
+
+<script src="//at.alicdn.com/t/font_740160_lslpgljo1t.js"></script>
+<style type="text/css">
+    .icon {
+       width: 1.5em; height: 1.5em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+	   color:#AEAEAE;
+    }
+
+</style>
+     <style type="text/css">
+  #goods{ 
+    position:fixed;
+    top:90px;
+    right:5px;
+    z-index:999;
+      
+}
+  .button .col-xs-2{
+        width: 80px;
+        color:#ccc;
+        padding-top: 5px;
+        height: 60px;
+        text-align:center;
+         font-size: 12px;
+         background: #ffffff;
+        
+    
+   }
+
+   #contentimg{
+      position:fixed;
+      left:174px;
+      top:585px;
+   }
+
+.z_top{width:100%;height:45px;background:#FFFFFF;
+	    text-align: center;line-height:45px;font-size:16px;
+	border-bottom: 1px solid #FAFAFA;font-weight:bold;color:#666666;
+	}
+.z_topa{width:100%;height:40px;background:#fff;
+	    text-align: center;line-height:40px;;
+	border-bottom: 1px solid #FAFAFA;color:#666666;
+	}
+	.z_topa ul{padding:0px;margin:0px;width:80%;margin:auto;}
+	.z_topa li{width:35%;margin-left:10%;height:38px;line-height:38px;float:left;font-weight:bold;font-size:14px!important}
+	.action{border-bottom: 2px solid #EE9C4D;color:#EE9C4D;}
+	.action svg{color:#EE9C4D;}
+	.centdiv{width:100%;margin-top:10px;color:#666;}
+	.centjja{width:100%;background:#FFFFFF;}
+	.centkka{width:100%;background:#FFFFFF;display:none;}
+	.spanleft{float:left;font-size:16px;}.spanright{float:right;}
+	.centjja ul{margin:0px;padding:0px;width:94%;margin:auto;}
+	.centjja ul li{height:100px;}
+	.centkka ul{margin:0px;padding:0px;width:94%;margin:auto;}
+	.centkka ul li{height:100px;}
+	.dceadiv{width:100%;height:50px;font-size:13px;border-bottom: 1px solid #FAFAFA;line-height:50px;}
+	.dceadiv img{width:40px;height:40px;margin-top:5px;}
+	.drigdiv{width:100%;height:35px;margin-top:7.5px;}
+	.lefted{width:60%;font-weight:800;text-align: center;font-size:16px;color:#EE9C4D;height:35px;line-height:35px;float:left;border-right:1px solid #F8F8F8;}
+	.leftedd{width:20%;height:35px;font-size:12px;margin-left:10%;float:left;}
+	.leftedd font{color:#a8a8a8;}
+	</style>
+</head>
+<body>
+         <?php
+$a=$_SERVER["QUERY_STRING"];
+$a_arr = explode("/", $a );
+$b_arr= explode(".", $a_arr[4] );
+$c=$b_arr[0];
+?> 
+      
+<div class="z_top">贷款超市</div>
+
+
+	<div class="centdiv">
+		<div class="centjja">
+			<ul>
+			 <volist name="list" id="v">
+			 <a href="{:U('/loan/read',array('id'=>$v['id'],'tid'=>$c))}">
+				<li>
+					<div class="dceadiv">
+						<span class="spanleft"><img src="{$v.img}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$v.name}</span>
+						<span class="spanright">{$v.member}人申请成功</span>
+					</div>
+					<div class="drigdiv">
+						<div class="lefted">{$v.price}</div>
+						<div class="leftedd"><font>利率</font>&nbsp;&nbsp;{$v.red}<br/><font>期限</font>&nbsp;&nbsp;{$v.day}天</div>
+					</div>
+				</li>
+				</a>
+				</volist>
+
+			</ul>
+		</div>
+
+
+		<div class="centkka">
+			<ul>
+				<volist name="card" id="vv">
+				 	 <a href="{:U('/loan/read',array('id'=>$v['id'],'tid'=>$c))}">
+				<li>
+					<div class="dceadiv">
+						<span class="spanleft"><img src="{$vv.img}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vv.name}</span>
+						<span class="spanright">{$vv.member}人申请成功</span>
+					</div>
+					<div class="drigdiv">
+						<div class="lefted">{$vv.price}</div>
+						<div class="leftedd"><font>利率</font>&nbsp;&nbsp;{$vv.red}<br/><font>期限</font>&nbsp;&nbsp;{$vv.day}天</div>
+					</div>
+				</li>
+				</a>
+				</volist>
+
+
+			</ul>
+		</div>
+	</div>
+
+
+ <!-- 
+<script src="//at.alicdn.com/t/font_740160_lslpgljo1t.js"></script>
+<style type="text/css">
+    .icon {
+       width: 1.5em; height: 1.5em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+	   color:#AEAEAE;
+    }
+</style>
+<!--
+<div class="centyy" onclick="tanzi();">
+			<p style="margin-top: 20px;color:#fff;">一键</p>
+			<p style="margin-top: 5px;color:#fff;">推广</p>
+		</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+	<a href="/">
+	<div class="col-xs2" >
+		<svg class="icon" aria-hidden="true">
+		    <use xlink:href="#icon-caifu"></use>
+		</svg>
+		<br>
+      <span  style="font-size:12px;">贷款</span>
+	</div>
+	</a>
+	<a href="{:U('/card')}">
+	<div class="col-xs2">
+		<svg class="icon"  aria-hidden="true">
+		    <use xlink:href="#icon-qianbao"></use>
+		</svg>
+		<br>
+       <span  style="font-size:12px;">办卡</span>
+	</div>
+	</a>
+	<!-- <a href="/member/index"  class="content" id="xs12s" >--      
+	<a href="{:U('/community')}">
+	<div class="col-xs2">
+		<svg class="icon" aria-hidden="true">
+		    <use xlink:href="#icon-shequ-active1"></use>
+		</svg>
+		<br>
+    <span  style="font-size:12px;">资讯</span>
+	</div>
+	</a>
+	<!--<a href="{:U('/recommend')}">
+	<div class="col-xs2">
+		<svg class="icon" style="color:#D61F4B;" aria-hidden="true">
+		    <use xlink:href="#icon-chanpinzhanshi1"></use>
+		</svg>
+		<br>
+    	<span  style="font-size:12px;">一键推广</span>
+	</div>
+	</a>--
+	<a href="{:U('/user')}">
+	<div class="col-xs2">
+		<svg class="icon" aria-hidden="true">
+		    <use xlink:href="#icon-gerenzhongxin1"></use>
+		</svg>
+		<br>
+    	<span  style="font-size:12px;">个人中心</span>
+	</div>
+	</a>
+</nav>-->
+
+</div>
+</body>
+<span style="display:none;"><?php echo htmlspecialchars_decode(C('cfg_sitecode')); ?></span>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script>
+	//jja
+	$("#jjd").click(function(){ 
+		$(".centkka").hide();
+		$(".centjja").show();
+		$("#kkd").removeClass("action");
+		$(this).addClass("action");
+	});
+	//kka
+	$("#kkd").click(function(){ 
+		$(".centjja").hide();
+		$(".centkka").show();
+		$("#jjd").removeClass("action");
+		$(this).addClass("action");
+	});
+</script>
+</html>

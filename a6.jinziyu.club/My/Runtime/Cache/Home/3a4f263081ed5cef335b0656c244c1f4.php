@@ -1,0 +1,37 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>会人中心</title>
+<link rel="stylesheet" type="text/css" href="/Public/css/hui.css" />
+<link rel="stylesheet" type="text/css" href="/Public/css/index.css" />
+</head>
+<body>
+	<div id="page">
+		<div style="height:44px;"></div>
+		<img src="/Public/image/banner.jpg" alt="banner" width="100%">
+			<header class="hui-header">
+			    <div id="hui-back"></div>
+			    <h1>推荐奖励说明</h1>
+			    <div id="hui-header-menu"></div>
+			</header>
+			<div class="hui-wrap" style="padding-top:10px">
+				<div class="hui-list" style="background:#FFFFFF; margin:10px 0;border:0">
+					<div class="amenu">
+						tip：奖励说明
+						
+					</div>
+				</div>
+				<div class="hui-list" style="background:#FFFFFF; margin-top:10px;border:0;padding:5px;">
+					<?php echo C('cfg_tuicent');?>
+			    </div>
+
+
+			</div>
+			    
+	</div>
+
+<script type="text/javascript" src="/Public/js/hui.js" charset="UTF-8"></script>
+</body>
+</html>

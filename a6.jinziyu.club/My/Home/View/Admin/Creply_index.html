@@ -1,0 +1,443 @@
+<script src="__PUBLIC__/layui/layui.js"></script>
+  <script>
+            function checkAll(){
+                //1.获取编号前面的复选框
+                var checkAllEle = document.getElementById("checkAll");
+                //2.对编号前面复选框的状态进行判断
+                if(checkAllEle.checked==true){
+                    //3.获取下面所有的复选框
+                    var checkOnes = document.getElementsByName("id[]");
+                    //4.对获取的所有复选框进行遍历
+                    for(var i=0;i<checkOnes.length;i++){
+                        //5.拿到每一个复选框，并将其状态置为选中
+                        checkOnes[i].checked=true;
+                    }
+                }else{
+                    //6.获取下面所有的复选框
+                    var checkOnes = document.getElementsByName("id[]");
+                    //7.对获取的所有复选框进行遍历
+                    for(var i=0;i<checkOnes.length;i++){
+                        //8.拿到每一个复选框，并将其状态置为未选中
+                        checkOnes[i].checked=false;
+                    }
+                }
+            }
+        </script>
+<link rel="stylesheet" href="__PUBLIC__/css/switch.css">
+<link href="__PUBLIC__/css/select2.min.css" rel="stylesheet" />
+<style>
+  .form-group{
+  	float:left;
+  }
+</style>
+<script src="__PUBLIC__/js/select2.min.js"></script>
+<section class="content-header">
+<div>
+	<ol class="breadcrumb" style="background: none; margin-bottom: 0px;">
+		<li><a href="{:U(GROUP_NAME.'/Main_index')}" style="color: #333;"><i class=" fa fa-home"></i>&nbsp;Home</a></li>
+		<li class="active">网贷设置</li>
+		<li class="active">核对记录</li>
+	</ol>
+</div>
+</section>
+<section class="content">
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title"></h3>
+				<div class="box-tools" style="left:10px;">
+					<form class="form-inline" method="post" action="{:U(GROUP_NAME.'/Creply_index')}">
+						<div class="form-group">
+							
+							<div class="input-group input-group-md">
+								<input type="text" name="keyword" class="form-control pull-right" style="width:120px;" placeholder="申请电话" value="">
+								<div class="input-group-btn">
+									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+								</div>
+							</div>
+							<!--div class="form-group">
+									<a href="javascript:;" onclick="doTxt();" class="btn btn-info" style="margin-left:10px;">导入txt</a>
+								</div-->
+                           
+                      </div>
+					</form>
+				</div>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+            
+              
+								
+				<table class="table table-bordered table-hover table-striped text-center">
+					<tbody>
+						<tr>
+							<th>
+								<label>
+									<input type="checkbox" id="checkAll" onclick="checkAll()"/>全选
+								</label>
+							</th>
+							
+							<th>网贷ID</th>
+							<th>标题</th>
+							<th>申请者姓名</th>
+							<!--th>申请者身份证</th-->
+                            <th>申请者手机号</th>
+							<!--th>推荐者ID</th-->
+							<th>推荐者姓名</th>
+							<th>申请时间</th>
+							<th>操作</th>
+						</tr>
+                  
+                         <form method="post" action="{:U(GROUP_NAME.'/jieshen_edit',array('id'=>$vo['id'],'keyword'=>$keyword,'p'=>$p))}">
+                             <!--div class="form-group">
+									 <input name="submit"type="submit" value="一键申请" class="btn btn-danger" style="margin-left:10px;"/>
+								</div-->
+                          			<div class="form-group">
+									 <input name="submit"type="submit" value="批量驳回" class="btn btn-danger" style="margin-left:10px;"/>
+								</div>
+								
+                          		<!--div class="form-group">
+									 <input name="submit"type="submit" value="一键删除" class="btn bg-maroon" style="margin-left:10px;"/>
+								</div-->
+                           <volist name="data" id="vo">
+                      	<tr>
+							<th>
+								<input type = 'checkbox' name = 'id[]' id = 'checkbox' value = "{$vo.id}" class="checkbox">
+							</th>
+							
+							<th>{$vo.id}</th>
+							<th>{$vo.bankname}</th>
+							<th>{$vo.name}</th>
+							<!--th>{$vo.shenno}</th-->
+                            <th>{$vo.shouji}</th>
+							<!--th>推荐者ID</th-->
+							<?php if($vo['tuiuser']=='admin'){ ?>
+							<th>无</th>
+							<?php }else{ ?>
+                      		<th>{$vo.nick}|{$vo.tuiuser}</th>
+                      		<?php } ?>
+							<th>{$vo.addtime|date='Y-m-d H:i:s',###}</th>
+							<th>
+                          		
+						<php>if($vo['status']==1){ echo "<font color=''>结算成功</font>";}else if($vo['status']==3 || $vo['status']==2){ echo "<font color=''>无需结算</font>";}else{</php>
+                    <a href="javascript:del('{$vo.name}','{:U(GROUP_NAME.'/heshijine',array('id'=>$vo['id'],'keyword'=>$keyword,'keyword2'=>$keyword2,'keyword3'=>$keyword3,'keyword4'=>$keyword4,'keyword5'=>$keyword5,'p'=>$p))}');" style="display: block;background:#003BB3;color:#FFF;padding:3px 5px;border-radius: 5px;">结算</a>&nbsp;&nbsp;
+					<a href="javascript:del('{$vo.name}','{:U(GROUP_NAME.'/heshijine2',array('id'=>$vo['id'],'keyword'=>$keyword,'keyword2'=>$keyword2,'keyword3'=>$keyword3,'keyword4'=>$keyword4,'keyword5'=>$keyword5,'p'=>$p))}');" style="display: block;background:#003BB3;color:#FFF;padding:3px 5px;border-radius: 5px;">无效</a>
+					<php>}</php>
+                          	</th>
+						</tr>
+                         </volist>
+                          </form>
+											</tbody>
+                  
+                
+				</table>
+			</div>
+			<!-- /.box-body -->
+			<div class="page">{$page}</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<style>
+	.do-txt{
+		display:none;
+	}
+	.do-txt .txts span{
+		
+	}
+	.do-txt .txts{
+		padding:20px 10px 5px;
+		position: relative;
+		display:flex;
+	}
+	.do-txt .txts select{
+		border: 1px solid #ddd;
+		padding: 2px 10px;
+	}
+	.do-txt button{
+		width: 50%;
+		margin: 30px 25%;
+		height: 35px;
+		border: none;
+		background: #f0882c;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 15px;
+		cursor:pointer;
+	}
+	.layui-layer{
+		z-index:999!important;
+	}
+	.layui-layer-shade{
+		z-index:99!important;
+	}
+</style>
+<div class="do-txt">
+	<div class="txts">
+		<span>号码规则：</span>
+		<select id="mtype">
+			<option value="">请选择</option>
+			<option value="1">前三后四</option>
+			<option value="2">前三后三</option>
+			<option value="3">前三后二</option>
+			<option value="4">前七后零</option>
+			<option value="5">前二后四</option>
+			<option value="6">前二后三</option>
+		  <option value="7">前一后四</option>
+		</select>
+	</div>
+	<div class="txts">
+		<span>网贷机构：</span>
+		<select class="singleSelect" id="gid" style="width: 300px;">
+			<option value="">请选择</option>
+			<option value="666">开心拿</option><option value="398">漫天星</option><option value="572">阿丽塔</option><option value="600">全得力金融</option><option value="629">快拿钱</option><option value="638">秒拿钱.</option><option value="682">借分期</option><option value="673">急用借</option><option value="675">快拿钱.</option><option value="679">你我借</option><option value="684">海螺</option><option value="705">金叶子</option><option value="711">攒钱花..</option>		</select>
+	</div>
+	<div class="txts">
+		<span>TXT文件：</span>
+		<input type="file" id="mobile-txt" />
+	</div>
+	<div class="txts">
+		<span>核对日期：</span>
+		<input type="text" name="times" id="times" value="" class="smallinput reservationtime" style="width:200px;border: 1px solid #ddd;padding: 3px;"  />
+	</div>
+	<button id="subMobile">提交</button>
+</div>
+
+<script>
+
+	$(function(){
+		$('.singleSelect').select2();
+		var $choose = $(".cheks");
+		 //全选
+		$("#checkAll").click(function(){
+			if($(this).prop('checked')){
+				$choose.each(function(){
+					$(this).prop("checked",true);
+				});
+			}else{
+				$choose.each(function(){
+					$(this).prop("checked",false);
+				});
+			}
+		});
+	});
+	
+	
+	//显示导入TXT
+	function doTxt(){
+		layer.open({
+			type: 1,
+			title: "导入TXT核对数据",
+			skin: 'layui-layer-rim', //加上边框
+			area: ['450px', '400px'], //宽高
+			content: $('.do-txt'),
+		});
+	}
+	
+	//一键申请/未申请
+	function setStatusAll(status){
+		var ids = [];
+		$('.cheks').each(function(){
+			if($(this).prop('checked')){
+				ids.push($(this).val());
+			}
+		});
+		if(ids.length == 0){
+			layer.alert('请勾选记录');
+			return false;
+		}
+		layer.confirm("确定一键申请勾选记录操作？",function(){
+			layer.load(2);
+			$.post("/m.php?m=Member&c=Creply&a=setStatusAll",{ids:ids.join(","),status:status},function(d){
+				if(d){
+					if(d.status){
+						layer.alert(d.info,function(){
+							location.reload();
+						});
+					}else{
+						layer.msg(d.info);
+					}
+				}else{
+					layer.closeAll();
+					layer.msg('请求失败！');
+				}
+			});
+		});
+	}
+	
+	
+	//一键删除
+	function delAll(){
+		layer.confirm("确定一键清空核对记录操作？",function(){
+			layer.load(2);
+			$.post("/m.php?m=Member&c=Creply&a=delAll",function(d){
+				if(d){
+					if(d.status){
+						layer.alert(d.info,function(){
+							location.reload();
+						});
+					}else{
+						layer.msg(d.info);
+					}
+				}else{
+					layer.closeAll();
+					layer.msg('请求失败！');
+				}
+			});
+		});
+	}
+	
+	
+	
+	//设置申请/未申请
+	function setStatus(id,status){
+		if(id){
+			layer.load(2);
+			$.post("/m.php?m=Member&c=Reply&a=setStatus",{id:id,status:status},function(d){
+				if(d){
+					if(d.status){
+						layer.alert("操作成功",function(){
+							location.reload();
+						})
+					}else{
+						layer.msg(d.info);
+					}
+				}else{
+					layer.msg('请求失败！');
+				}
+			})
+		}
+	}
+	
+	
+	//提交核对数据
+	$('#subMobile').click(function(){
+		var formData = new FormData();
+		
+		var mtype = $('#mtype option:selected').val();
+		if(mtype == ""){
+			layer.msg('请选择号码类型!');
+			return false;
+		}
+		
+		var gid = $('#gid option:selected').val();
+		if(gid == ""){
+			layer.msg('请选择网贷机构!');
+			return false;
+		}
+		formData.append("gid",gid);
+		if($('#mobile-txt')[0].files[0] == undefined){
+			layer.msg('请上传核对文件!');
+			return false;
+		}
+		var times = $('#times').val();
+		if(mtype == ""){
+			layer.msg('请选择核对日期!');
+			return false;
+		}
+		formData.append("times",times);
+		formData.append("mtype",mtype);
+		
+		//文件
+		formData.append('file', $('#mobile-txt')[0].files[0]);
+		$.ajax({
+			url:"/m.php?m=Member&c=Creply&a=upMobileTxt",
+			type:"post",
+			data:formData,
+			cache: false,
+			processData: false,
+			contentType: false,
+			beforeSend: function () {
+				// 禁用按钮防止重复提交
+				layer.load(2);
+				$("#subMobile").attr({ disabled: "disabled" });
+			},
+			success:function(data){
+				console.log(data);
+				layer.closeAll();
+				layer.alert("操作成功！",function(){
+					location.reload();
+				});
+			},
+			error:function(e){
+				layer.closeAll();
+				layer.alert("网络错误，请重试！！");
+			}
+		});
+	})
+	
+	$.fn.datetimepicker.dates['zh-CN'] = {
+		days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+		daysShort: ["日", "一", "二", "三", "四", "五", "六", "日"],
+		daysMin: ["日", "一", "二", "三", "四", "五", "六", "日"],
+		months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+		monthsShort: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"],
+		meridiem: ["上午", "下午"],
+		today: "今天"
+	};
+
+	$('.reservationtime').datetimepicker({
+		format: 'yyyy-mm-dd',
+		language: 'zh-CN',
+		weekStart: 1,
+		todayBtn: 1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		showMeridian: 1
+	});
+</script>
+
+
+    </div>
+  
+    <div class="control-sidebar-bg" style="position: fixed; height: auto;"></div>
+</div>
+<script src="__PUBLIC__/js/commonz.js"></script>
+<script>
+	var route = "c=Creply&a=index";
+    var href = '';
+	console.log(route);
+    $('.sidebar-menu').find('a').each(function () {
+        $(this).parent('li').removeClass('active');
+        href = $(this).attr('href');
+        if ((href.indexOf(route) != -1)) {
+            $(this).parent('li').addClass('active');
+            $(this).parents('.treeview').addClass('active');
+			return false;
+		}
+    });
+
+    $('.dropdown-toggle').click(function (ev) {
+        $(this).find('.fa-angle-down').toggleClass('hidden');
+        $(this).find('.fa-angle-up').toggleClass('hidden');
+    });
+	
+	// 调整默认选择内容
+	$("select").each(function(index, element) {
+		$(element).find("option[value='"+$(this).attr('default')+"']").attr('selected','selected');
+	});
+</script>
+<script>
+
+    function del(name,jumpurl){
+
+        layer.confirm(
+
+                '确定要删除自由块:['+name+']吗?',
+
+                function (){
+
+                    window.location.href = jumpurl;
+
+                }
+
+        );
+
+    }
+
+</script>

@@ -1,0 +1,120 @@
+    *{margin: 0;padding: 0;}
+    body {
+      background: #F8F8F8;
+      font-size: 14px;
+    }
+    a{text-decoration: none;}
+    a:link{color:#333333;  }
+    a:visited{ color:#333333;}
+    a:focus, a:hover {
+        text-decoration: none;
+    }
+    a:active{color:#000000;}
+    .page{
+        max-width: 640px;margin: 0 auto;
+    }
+    .swiper-container {
+        overflow: hidden;
+    }
+    .swiper-container img{width:100%;}
+    #loan{float:left;
+            min-height: 105px;
+            width:48%;
+            background: #FF3333;
+            margin:1%;
+            border-radius:10px;
+            -moz-border-radius:10px;
+            background: linear-gradient(#FF0033, #FF6666); /* 颜色渐变 */ 
+            color:#fff;
+    }
+    #loan_img{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+   #card{float:left;
+            min-height: 105px;
+            background: red;
+            width: 48%;
+            margin: 1%;  
+            border-radius:10px;
+            -moz-border-radius:10px;
+            background: linear-gradient(#3333FF, #3399FF); /* 颜色渐变 */ 
+            color:#fff;
+    }
+   #card_img{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+   }
+   .col{background: #fff}
+   .rows{overflow: hidden;}
+   .col-xs{position:relative;float: left;background: #ffffff; margin:0.5% 1%;padding:1%;width:48%;}
+
+   .col-xs img{width:50px;height:50px;}
+   .col-xs .des{position: absolute;left: 70px;top: 10px;}
+   .col-xs2{float:left;width:25%;text-align:center;padding:5px 0 2px 0;}
+   .col-xs2 img{width:30px;}
+
+   .col-xs3{position:relative;float:left;text-align:center;margin: 10px 0;width:25%;color: #686868;padding:15px 0;}
+   .col-xs3 img{width:60px;}
+   .col-xs3 .badge{
+            background:#FF9933;
+            position: absolute;
+            right: 0;
+            top: 0;
+     }
+    .col-xs3 h4{font-size:13px;margin:5px;}
+    #car{
+            background:url('http://361.360pr7.cn/public/static/images/car.png');
+            -moz-background-size:80px 100px; /* 老版本的 Firefox */
+            background-size:230px 200px;
+            background-repeat:no-repeat;
+            background-size: cover;
+      }
+      .cars{overflow: hidden;
+            margin: 5px;
+            padding:5px;
+            height: 140px;
+            position: relative;}
+      #car p,.col-xs5 p{line-height:30px;font-size:13px;color:#B8B8B8;}
+      .col-xs5{
+         position: relative;
+         background: #E8E8E8;
+        padding-left:16px;
+         margin: 5px;
+         height:65px;
+     }
+    .col-xs5 h4{padding-top:16px;}
+    .col-xs5 .img-circle{
+          width: 55px; 
+          position: absolute;
+          right: 10px;
+          top: 8px; 
+     }
+     #bnt1{
+      padding: 1px 10px;
+      border:1px solid #FF6633 ; 
+      background-color:#ffffff;
+      color: #FF6633;
+      border-radius:25px;
+      -moz-border-radius:25px;
+     }
+
+  .hui-list table tr{text-align:left;height:30px;}
+  .hui-list table td{width:100%;color:#666;line-height: 30px}
+  .hui-list table td a{color:#999;}
+
+  .pages{float:right;margin:30px}
+  .pages a,.pages span{
+    float:left;
+      display: block;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      font-size: 14px;
+  }
+  .pages .current{background: #3388FF !important;color: #FFFFFF;}
+  .amenu{overflow: hidden;padding:20px 10px;}
+  .amenu a{float:left;color:#3388FF}

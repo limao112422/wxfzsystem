@@ -1,0 +1,168 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>贷款中心</title>
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="/Public/css/frozen.css">
+<link rel="stylesheet" href="/Public/css/swiper.min.css">
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>  
+<script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+<script src="/Public/css/swiper.min.js"></script>
+<link rel="stylesheet" href="/Public/css/index.css">
+     <style type="text/css">
+
+     
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+     h4{
+      font-size:15px;
+     }
+     h5{
+     font-size:12px;
+     }
+     .badge{
+            background:#FF9933;
+            position: absolute;
+            left: 50px;
+            top: 0px;
+     }
+
+     .col-xs-5{
+         background: #E8E8E8;
+         margin: 5px;
+         height:65px;
+         width: 185px;
+     }
+      .col-xs-5 .img-circle{
+          width: 55px; 
+          position: absolute;
+          left: 130px;
+          top: 8px; 
+     }
+
+     #bnt1{
+       border:1px solid #FF6633 ; 
+       background-color:#ffffff;
+        color: #FF6633;
+         border-radius:25px;
+         -moz-border-radius:25px;
+     }
+
+     h4{
+       margin-top:16px;
+     }
+     
+      #car{
+            background:url('http://361.360pr7.cn/public/static/images/car.png');
+            -moz-background-size:80px 100px; /* 老版本的 Firefox */
+            background-size:230px 200px;
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
+
+      }
+    
+	
+  #goods{ 
+    position:fixed;
+    top:90px;
+    right:5px;
+    z-index:999;
+      
+}
+
+
+
+
+  .button .col-xs-2{
+        width: 80px;
+        color:#ccc;
+        padding-top: 5px;
+        height: 60px;
+        text-align:center;
+         font-size: 12px;
+         background: #ffffff;
+        
+    
+   }
+
+
+
+
+   #contentimg{
+      position:fixed;
+      left:174px;
+      top:585px;
+   }
+
+
+
+    </style>
+    
+
+</head>
+<body>
+<div class="page">
+
+    <div class="rows">
+    <div class="col-xs-12" style="margin-top:10px; background: #ffffff; "></div>
+
+       <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><a href="<?php echo U('/loan/read',array('id'=>$v['id']));?>">
+            <div class="col-xs-12" style="background: #ffffff; ">
+                <div class="col-xs-3" style="margin: 10px -20px 0px 0px;">
+                     <img src="<?php echo ($v["img"]); ?>"  class="img-rounded" style="width: 60px;" >
+                </div>   
+
+                <div class="col-xs-6" style="margin-top:10px; margin-bottom:10px; ">
+                    <span style="font-size:16px; font-weight:bold; "><?php echo ($v["name"]); ?></span><br>
+                     <input type="button" class="btn btn-default" value="<?php echo ($v["pay"]); ?>%佣金" style="height: 20px; padding-top: 0px; font-size:12px;
+                     border:1px solid #3399CC; color: #3399CC;" >
+                </div>
+
+                <div class="col-xs-3" style="margin-top: 5px; color: #909090;">
+                    <h5 style="padding:7px 0px 7px 0px; color: #FF6633; font-size: 18px;"><?php echo ($v["red"]); ?>%</h5>
+                    <h5>日利率</h5>
+                </div>
+
+
+                <div class="col-xs-12" style="margin:7px 0px 7px 0px; color: #909090;">
+           
+                  <img src="http://361.360pr7.cn/public/static/img/loancon.png" class="img-circle" width="20px"><span><?php echo ($v["price"]); ?>·<?php echo ($v["day"]); ?>天 
+                  </span>
+                  <span style="  float: right;">
+                  <img src="http://361.360pr7.cn/public/static/img/loantime.png" class="img-circle" width="20px"><span><?php echo ($v["sday"]); ?>小时</span>
+                </div>  
+            </div>
+          <div class="col-xs-12" style="height: 1px; background: #ccc; "></div> 
+      </a><?php endforeach; endif; else: echo "" ;endif; ?>
+
+   
+  
+  </div>
+</div>
+<span style="display:none;"><?php echo htmlspecialchars_decode(C('cfg_sitecode')); ?></span>
+</body>
+</html>

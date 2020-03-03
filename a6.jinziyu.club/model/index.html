@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+	<title>贷款中心</title>
+     <link rel="stylesheet" href="http://361.360pr7.cn/public/static/css/bootstrap.min.css">
+     <script src="http://361.360pr7.cn/public/static/js/jquery-3.3.1.min.js"/></script>
+     <link rel="stylesheet" href="http://361.360pr7.cn/public/static/css/swiper.min.css">
+     <meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">
+    
+		<!--
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+
+		<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		-->
+   <link rel="stylesheet" href="http://361.360pr7.cn/public/static/frozenui/css/frozen.css">
+
+     <script src="http://361.360pr7.cn/public/static/js/bootstrap.min.js"></script>
+     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+     <style type="text/css">
+
+     
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+   
+
+    #loan{
+			height: 105px;
+			width:180px;
+			background: #FF3333;
+			margin:5px;
+			border-radius:10px;
+			-moz-border-radius:10px;
+            background: linear-gradient(#FF0033, #FF6666); /* 颜色渐变 */ 
+            color:#fff;
+    }
+
+	#loan_img{
+		position: absolute;
+		left: 122px;
+		top: 10px;
+	}
+   
+   #card{
+			height: 105px;
+			background: red;
+			width: 180px;
+			margin: 5px;  
+			border-radius:10px;
+			-moz-border-radius:10px;
+			background: linear-gradient(#3333FF, #3399FF); /* 颜色渐变 */ 
+			color:#fff;
+    }
+   
+   #card_img{
+			position: absolute;
+			left: 115px;
+			top: 10px;
+   }
+
+   
+   span{
+		                   
+			overflow: hidden;/*内容超出后隐藏*/
+			text-overflow: ellipsis;/* 超出内容显示为省略号*/
+			white-space: nowrap;
+   }
+   
+     
+
+
+    
+   
+   
+   html, body {
+              position: relative;
+              height: 46%;
+            }
+            body {
+              background: #F8F8F8;
+              font-size: 14px;
+              color:#000;
+              margin: 0;
+              padding: 0;
+            }
+    
+
+    a:link{color:#000000;  }
+    a:visited{ color:#000000;  }
+    a:hover{ color:#000000;}
+    a:active{color:#000000;}
+    
+	
+  #goods{ 
+    position:fixed;
+    top:90px;
+    right:5px;
+    z-index:999;
+      
+}
+
+
+
+
+  .button .col-xs-2{
+        width: 80px;
+        color:#ccc;
+        padding-top: 5px;
+        height: 60px;
+        text-align:center;
+         font-size: 12px;
+         background: #ffffff;
+        
+    
+   }
+
+
+
+
+   #contentimg{
+      position:fixed;
+      left:174px;
+      top:585px;
+   }
+
+
+
+    </style>
+    
+
+</head>
+<body style="font-size: 15px;"  >
+<!--
+  <a href="/service/index"> 
+ <div id="goods">
+   <img src="http://361.360pr7.cn/public/static/images/kk.png" width="50px" id="kk" />
+ </div>
+ </a> 
+ -->
+
+ <!--
+<img src="http://361.360pr7.cn/public/static/img/apply/bac.png" id="users"  width="100%" height="700px" >
+-->
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\0d9522de3c734fc307dfa61cf8b22778.jpg" style="height: 141px; width: 100%;"></div>
+      <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\b932161cf66a84d04fe2131b399781c7.jpg" style="height: 141px; width: 100%;"></div>
+      <div class="swiper-slide"><img src="http://361.360pr7.cn/public/uploads/20180315\349408bb162aeb4e539a8c35f08ad7c7.jpg" style="height: 141px; width: 100%;"></div>
+    
+  </div>
+  <!--分页-->
+  <div  class="swiper-pagination"></div>
+</div>
+
+ 
+ <div class="container-fluid">
+  <div class="row">
+
+
+  <div class="col-xs-12" style="background: #FFFFFF;">
+  <a href="/contentloan/home">
+     <div class="col-xs-5" id="loan" >
+     	<img src="http://361.360pr7.cn/public/static/img/loan.png" width="60px;" id="loan_img" />
+     	<h2 style="font-size:20px; margin-top:25px;">快速借钱</h2>
+     	<span class="badge" style="position: absolute;left:90px;top: 5px; background: #FFCC00; font-size:8px;color:red; " >
+     		HOT
+     	</span>
+     	<h5 style="margin-top:5px;">两分钟借走两万</h5>
+     </div>
+   </a>  
+     <a href="/card">
+         <div class="col-xs-5" id="card" style="">
+         	 <img src="http://361.360pr7.cn/public/static/img/card.png" width="60px;" id="card_img" />
+         	<p style="margin-top:25px;"> <h2 style="font-size:20px;">秒办大额</h2>
+          <h5 style="margin-top:5px; ">
+         		大额信用卡秒批
+         	</h5>
+          </p>
+         </div>
+     </a>
+    </div>
+
+<div class="col-xs-12" style="margin: 5px; font-size:12px; width: 400px;">
+ <a href="" style="color:#3366CC;">产品推荐</a> <a style=" float: right; color: #3366CC;" href="">更多产品》</a>
+</div>
+ 
+ <a href="/card/content">
+		 <div class="col-xs-5" style="background: #ffffff; margin-left:10px; margin-top:5px;  width:190px; height: 65px; ">
+			 	  <img src="http://361.360pr7.cn/public/static/img/cards.png" width="50px;" style="margin-top:9px;" class="img-circle">	  
+		 	    <div style="position: absolute;left: 70px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					秒办大额
+					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					大额信用卡秒批
+			</span>		
+				</div>	
+   </a>     
+					
+		 	  
+		 </div>
+   
+	<a href="/contentloan?id=64">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180531\3611c16949fb91b40abf171cad2897c2.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					大吉大利					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=63">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180530\e6b363a26a25a8e49a71c2b6940aaa0b.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					商奇宝					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=62">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180530\03901e0eda3a4be64488af129022e36c.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					花金宝					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=61">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180530\73bf7d4b3c0f44d0e16d3df96ef9f3fa.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					宏袋钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=60">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180528\57b740e04d31b8961e45460317825c40.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					51即刻有					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=59">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180524\dcf3a29f010389b69b807aeb2a2d29b3.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					盛隆钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=58">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180524\9cc3515a1b4922ff8ca973918925e78e.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					芝麻开门					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=57">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180523\4f0ddc912464ba4cd6923637925a76b1.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					速盈钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=56">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180524\fae89a488a068953c6ee56e97d4f50b6.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					尽心贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=55">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180522\9ba46144f5bdc73822081e657d60c23c.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					伏地魔					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=54">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180521\8a060ee19aea9c977df7fe02be4c97a2.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					创新268					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金50元/户			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=53">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180511\c8dd68f6a1bc08236c23c723abe53cb1.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					51应急贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=52">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180510\f6828eadf553e63c2f36bf99dfaffd77.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					信富期贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=51">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180426\b704e2babe6e3e17c97330571da7d828.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					海尔够花					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金1%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=50">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180609\b7f5a030b281f4cf92f63bf431438330.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					无价宝					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=48">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180424\c84d37380b95abed4d1de0b59924f696.jpeg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					读秒企业钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金1%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=47">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180516\b0002b44288c5ff607a0f18cc7bff1a1.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					众邦银号					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金50元/户			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=46">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180502\2a545e4daaf59b0011ae7686de316ee7.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					钱进贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=45">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180516\6fbea7f2a15a5e8f4a988e247ff47e58.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					瑶钱树					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=44">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180502\c585110216771837488e9e2c8cdde1c4.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					机遇钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=41">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180605\a3dc0038e37028183cd4fd9e3e36c409.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					向薪宝					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=40">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180502\dc8fb951c9032b43f2ce2a5d82fa2750.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					米米罐					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=39">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180418\c57eb364d53adb4926074dc155a2e87e.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					芝麻至奥					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请+1%放款			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=36">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180416\b06c6541cafde2bc2a6b83670d85b90f.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					闪电微贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=35">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180612\1584b84b8f2c5119f6334210f7c2fbd7.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					懒猫					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=34">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180605\2ecfd34ccae72223035e02949e2c814e.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					金机宝					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=33">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180415\12283c0f407e1b362605d5ed79f9c535.jpeg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					读秒大白					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金1.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=28">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\898135a582cfc6d2587056ffa19e6812.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					读秒					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=27">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180428\ed8bf658323726c39c048b8367123fc8.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					猫猫钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					5元/申请			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=25">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180420\0e24998c66fff68d91ec2f46f9cad187.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					钞快贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=24">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180524\1a81bd4e8a95c34f078b595ff4f0dc8d.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					百彩钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=23">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\0b678920c7a431588831c3dcc294c070.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					恒易贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=22">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180512\b91b40386c8673c192894aaddd8ecaa5.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					能森钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=21">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180506\75e1fb0dcb179cfe3df93fd7014fb1ed.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					省呗					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					150元/单			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=20">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180513\af8ace80b701b67fe49b55fa198efdf6.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					花花贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					35元/单			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=19">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180518\e7381271263af9743400888862671c8b.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					众安点点					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=18">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\8a7186a9b08b8c7f9017bfa183b3def5.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					宜人贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3.3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=17">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\1a7de806e644c29e8df909c469c4dbaf.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					超人卡					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=16">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180501\ae75e559265da6e32e436f5438483a1f.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					房司令					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=15">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\b560a82c6fbfcf4e9b1828e900135f41.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					提钱游					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=14">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180324\45b5a769290ff65a2b8d26262439631d.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					小树时代					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金1.2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=13">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180324\e019e8c9cffc7db86714ce8f901d1d42.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					360借条					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					100元/单			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=11">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180502\0e39e89e32fd09f44ff71f80359372ad.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					宅E经营贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=10">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180421\df23c2b507e83e7f66d476bf030e68ad.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					百彩钱包					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=9">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180329\9c732a1642bf85ef0ac58999cfb3e672.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					钱超人					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=8">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180324\9dae940cb373cb1194b3f7eff09e5fb7.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					爱上街					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=7">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\41ad2dfa45060c2d7e2c3d761ca00727.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					你我贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金3%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=5">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180501\351c7cc82ef3d63cc33af6cbcae58403.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					51人品贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=4">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180508\427cb15dfdc53fcc073b161539a91603.png" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					秒呗					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					50元/单			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=3">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180412\c41808b256a4b3344ee3e5f2fb22b26a.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					壹财道					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金4%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=2">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180324\b393f7365049f07377361bd2139c9afc.JPG" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					众安点点					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					佣金2.5%			</span>		
+				</div>	
+		 </div>
+	</a>	 
+	<a href="/contentloan?id=1">
+		 <div class="col-xs-5" style="background: #ffffff;  margin-left:10px; margin-top:5px;   width:190px; height: 65px;">
+		 	 <img src="http://361.360pr7.cn/public/uploads/20180410\5955dd9ec3301efaac1d0af0802079b3.jpg" width="50px;" style="margin-top:9px;" class="img-circle">
+
+		 	  <div style="position: absolute;left: 75px;top: 10px;">
+		 	    <span style="font-size:15px;">
+					拍拍贷					</span>
+
+					<br>
+			<span style="color: #ccc; font-size:10px;">							
+					105/单			</span>		
+				</div>	
+		 </div>
+	</a>	 
+
+		  </div>
+</div>
+
+  <a href="http://www.miitbeian.gov.cn">
+    <div class="col-xs-12" style="margin-top:5px;text-align:center;background: #ffffff;font-weight:300; color: #989898;">
+      <span style="color:#FF9900;">蚂蚁金服</span> <span style="font-weight:100; color:#FF9900; font-size:10px;">微投入·轻创业</span><br>
+      商务合作：me@qq.com<br>
+     浙ICP备xxxxxxxx号-2
+    </div>
+  </a>
+
+<div class="col-xs-12" style=" margin-top: 70px;"></div>
+
+
+<!-- 表单补充 手机号 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">会员资料补充</h4>
+      </div>
+      <div class="modal-body">
+       
+          <div class="ui-form ui-border-t">
+    <form action="/member/check" method="post" id="form">
+        <div class="ui-form-item ui-border-b">
+            <label>
+               姓名
+            </label>
+            <input type="text" name="name" id="name" placeholder="请输入姓名">
+        </div>
+        <div class="ui-form-item ui-border-b">
+            <label>
+               手机号
+            </label>
+            <input type="text" name="phone" id="phone" placeholder="请输入手机号">
+        </div>
+
+         <div class="ui-form-item ui-border-b">
+            <label>
+              验证码
+            </label>
+            <input type="text" placeholder="输入验证码" name="code" id="code"   style="width:2.25rem;">
+          <span style="font-size:0.13rem;" id="send">
+            发送验证码
+           </span>
+           <span style="color: red;" id="err"></span>
+        </div>
+       
+        
+</div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="ui-btn-wrap">
+            <button class="ui-btn-lg ui-btn-primary" type="submit">
+               立即提交
+            </button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 补充结束 -->
+
+
+<script src="http://361.360pr7.cn/public/static/js/swiper.min.js"></script>
+<script>
+
+$(document).ready(function(){
+$("#users").hide();
+ //$("#user").fadeToggle(5000);
+//$(".container").hide();
+//$(".container").fadeToggle(9000);
+
+  //改变图标
+  //  $("#sy").css({"background":"url(http://361.360pr7.cn/public/static/img/f11.png) no-repeat top center","color":"red","background-size":"30px 30px"});
+
+    $('#sy').attr('src', 'http://361.360pr7.cn/public/static/img/f11.png');
+
+      var mySwiper = new Swiper('.swiper-container', {
+      //分页参数
+        pagination: {
+              el: '.swiper-pagination',
+         },
+      autoplay: true,//可选选项，自动滑动
+
+    });
+
+// 验证是否已经填写了资料
+  var check = "true";
+  if(check == 'false'){
+    $('#exampleModal').modal('show');
+  }
+
+  //验证手机号
+   $("#phone").blur(function(){
+              var phone = $(this).val();
+             if(phone.length != 11){
+                   $("#err").html("*手机号不正确");
+                }else{
+                   $("#err").html("");
+                }
+   });
+    //验证姓名
+    $("#name").blur(function(){
+             var name = $(this).val();
+             if(name == ""){
+                   $("#err").html("*请填写姓名");
+                }else{
+                   $("#err").html("");
+                }
+   });
+
+   //不可点击
+   $("#send").attr("disabled", true);  
+   //发送短信
+   $("#send").click(function(){
+                var phone = $("#phone").val();
+
+                if(phone.length != 11){
+                     alert('手机号有误');
+                      return false;
+                }
+                     
+              $.ajax({
+                      url:"/member/send",
+                      type:"post",
+                      dataType:"json",
+                      data:{phone:phone},
+                      success:function(data){
+                        if(data.status == 1){
+                            alert('发送成功'); 
+                        }
+                      }
+
+                }); 
+
+                      //倒计时3秒
+          var i = 60;
+
+          //创建一个定时器
+          var obj = setInterval(function(){
+            //每秒-1
+            i--;
+            //如果减到负数，就停止计时器
+            if( i > 0 ){
+              $("#send").html('倒计时'+i);
+              $("#send").css("color","red");
+            }else{
+              $("#send").attr('disabled', false).html('获取验证码');
+              //销毁定时器
+              clearInterval( obj );
+            }
+            
+          },1000);
+
+   });
+
+       $("#form").submit(function(){
+                var name = $("#name").val();
+                     if(name == ''){
+                    alert('姓名不能为空');
+                     return false;
+                }
+
+                 var phone = $("#phone").val();
+                     if(phone.length != 11){
+                      alert('手机号有误');
+                      return false;
+                }
+
+                  var code = $("#code").val();
+                     if(code.length != 6){
+                      alert('验证码有误');
+                      return false;
+                }
+
+
+
+        });
+      
+        var msg = "";
+        if(msg == 'true'){
+             alert('完善成功');
+        }
+
+ });
+</script>
+
+  
+<nav class="navbar navbar-default navbar-fixed-bottom">
+ 
+<div class="button">
+
+ <a href="/" >
+   <div class="col-xs-2" >
+      <img src="http://361.360pr7.cn/public/static/img/f12.png" width="30px" id="sy"  ><br>
+      贷款中心
+   </div>
+</a>   
+
+ <a href="/card"  >
+   <div class="col-xs-2" >
+          <img src="http://361.360pr7.cn/public/static/img/f2.png" width="30px" id="rel"  ><br> 
+       办卡中心
+   </div>
+</a>   
+     
+  <!-- <a href="/member/index"  class="content" id="xs12s" >-->       
+   <a href="/communityindex"  class="content" id="xs12s" >       
+    <div class="col-xs-2" style="padding-top: 18px;">
+     <img src="http://361.360pr7.cn/public/static/img/f5.png" width="55px" id="contentimg"  ><br>   
+    技术社区
+    </div>
+  </a>   
+
+<a href="/recommend" >
+    <div class="col-xs-2" id="xs12s">
+     <img src="http://361.360pr7.cn/public/static/img/f3.png" width="30px" id="money"  ><br>     
+    	产品推荐
+    </div>
+</a>    
+        
+<a href="/userindex" >
+    <div class="col-xs-2">
+     <img src="http://361.360pr7.cn/public/static/img/f4.png" width="30px" id="user"  ><br>   
+    	个人中心
+ </div>   
+</a>
+
+  </div>
+</nav>
+
+
+ <script type="text/javascript">
+
+var phoneWidth =  parseInt(window.screen.width);
+var phoneScale = phoneWidth/640;
+var ua = navigator.userAgent;
+if (/Android (\d+\.\d+)/.test(ua)){
+    var version = parseFloat(RegExp.$1);
+    if(version>2.3){
+        document.write('<meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">');
+    }else{
+        document.write('<meta name="viewport" content="width=40, target-densitydpi=device-dpi">');
+    }
+} else {
+    document.write('<meta name="viewport" content="width=410, user-scalable=no, target-densitydpi=device-dpi">');
+}
+
+
+$(document).ready(function(){
+     
+      
+});
+
+// 有效的 拖动效果
+      var block = document.getElementById("goods");
+  var oW,oH;
+  // 绑定touchstart事件
+  block.addEventListener("touchstart", function(e) {
+   console.log(e);
+   var touches = e.touches[0];
+   oW = touches.clientX - block.offsetLeft;
+   oH = touches.clientY - block.offsetTop;
+   //阻止页面的滑动默认事件
+   document.addEventListener("touchmove",defaultEvent,false);
+  },false)
+ 
+  block.addEventListener("touchmove", function(e) {
+   var touches = e.touches[0];
+   var oLeft = touches.clientX - oW;
+   var oTop = touches.clientY - oH;
+   if(oLeft < 0) {
+    oLeft = 0;
+   }else if(oLeft > document.documentElement.clientWidth - block.offsetWidth) {
+    oLeft = (document.documentElement.clientWidth - block.offsetWidth);
+   }
+   block.style.left = oLeft + "px";
+   block.style.top = oTop + "px";
+  },false);
+   
+  block.addEventListener("touchend",function() {
+   document.removeEventListener("touchmove",defaultEvent,false);
+  },false);
+  function defaultEvent(e) {
+   e.preventDefault();
+  }
+
+ </script>
+</body>
+</html>
