@@ -39,7 +39,8 @@
 						</div>	
                       	</a>
 					</div>	
-            </div>					
+            </div>			
+            		
             <div class="row">
                 <div class="col-xs-12">
                     <div class="box">
@@ -123,18 +124,7 @@
     });
 
     $('.sigleAdd').click(function(ev){
-        layer.open({
-                  type: 2,
-                  title: '人数折线图',
-                  shadeClose: true,
-                  shade: 0.8,
-                  maxmin: true,
-                  area :["80%","750px"],
-                  content: '/member/peozxt', //iframe的url
-                  success: function(layero, index) {
-                    layer.iframeAuto(index);
-                  }
-                });
+        
     });
 
     $('.plAdd').click(function(ev){
