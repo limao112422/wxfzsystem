@@ -4,6 +4,7 @@ return array (
   'cfg_sitetitle' => '任务系统v1.0',
   'cfg_fencheng' => '0.1',
   'cfg_fencheng2' => '0.1',
+  'cfg_shouxufei' => '0.1',
   'cfg_min' => '20',
   'cfg_tixian' => '0.1',
   'cfg_yongjin' => '8',
