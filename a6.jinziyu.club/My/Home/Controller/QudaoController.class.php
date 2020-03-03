@@ -255,7 +255,8 @@ class QudaoController extends ComController {
 			$this->redirect($url, array('keyword4'=>$keyword4,'keyword5'=>$keyword5,'keyword6'=>$keyword6,'p'=>$p), 0, '结算成功...即将跳转页面');exit;
 		}
 	}
-  protected function getusermoney($user,$money,$most,$text,$type=0,$chanid=0){
+  
+	protected function getusermoney($user,$money,$most,$text,$type=0,$chanid=0){
 		$arr = array(
 			'user'     => $user,
 			'money'	   => $money,
@@ -269,6 +270,7 @@ class QudaoController extends ComController {
 		$status = $Payorder->add($arr);
 		return $status;
 	}
+	
 	public function list_add(){
 		$this->title = "添加任务";
        	  $Mq=D('qudao');
@@ -295,24 +297,27 @@ class QudaoController extends ComController {
 			  if(!$status){
 				$this->error("添加失败!");
 			  }
-              $res=$Mq->where(array('id'=>session(C('USER_QUDAO_KEY'))))->setDec('price',$zh);
+			  $res=$Mq->where(array('id'=>session(C('USER_QUDAO_KEY'))))->setDec('price',$zh);
+			
           	  if($res){
               $user1= session(C('USER_QUDAO_KEY'));
               $bili1=$zh;
 			  $text="任务发布";
               $motype=2;//减少 
-              $type=2;//下单员
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type); 
+			  $type=2;//下单员
+			  $mobile=$Mq->where(array('id'=>session(C('USER_QUDAO_KEY'))))->setDec('mobile',$zh);
+              $momsg=$this->getusermoney($user1,$mobile,$bili1,$motype,$text,$type); 
               }
               if($pd['rel']!=0){
                 $bili2=round(($zh-$_POST['pay'])*C('cfg_fencheng2'),2);
-                $res2=$Mq->where(array('id'=>$pd['rel']))->setInc('price',$bili2);
+				$res2=$Mq->where(array('id'=>$pd['rel']))->setInc('price',$bili2);
+				$mobile2=$Mq->where(array('id'=>$pd['rel']))->setDec('mobile',$zh);
                 if($res2){
               	$user2= $pd['rel'];
 			    $text2="下级号商发布分成";
                 $motype2=1;//增加 
                 $type2=2;//下单员
-                $momsg=$this->getusermoney($user2,$bili2,$motype2,$text2,$type2); 
+                $momsg=$this->getusermoney($user2,$mobile2,$bili2,$motype2,$text2,$type2); 
                 }
               }
 			  $this->success("添加成功!");
@@ -352,8 +357,9 @@ class QudaoController extends ComController {
 										$type=1;//用户变动
 										$user1=$info['tuiuser'];
 										$text='任务佣金';
-                                      	$motype=1;//增加
-										$momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+										  $motype=1;//增加
+										$mobile1=$user->where(array('id'=>$info['tuiuser']))->setDec('mobile',$zh);
+										$momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
 										if($momsg){
 											//查询一级的id是否有上级是否有二级
                                           	$rel=$user->where(array('id'=>$info['tuiuser']))->find();
@@ -368,7 +374,8 @@ class QudaoController extends ComController {
                                                	    $user2=$erji;
 													$motype=1;//增加
 													$text=$ttttxxxt.'任务二级佣金';
-													$momsg2=$this->getusermoney($user2,$mo2,$motype,$text,$type,$id);
+													$mobile2=$user->where(array('id'=>$erji))->setDec('mobile',$zh);
+													$momsg2=$this->getusermoney($user2,$mobile2,$mo2,$motype,$text,$type,$id);
 												
 												}
 											}
