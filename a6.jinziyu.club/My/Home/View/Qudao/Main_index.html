@@ -44,7 +44,7 @@ $url="http://".$_SERVER['SERVER_NAME'].U('Register/signups',array('invitor' => $
 				
 					<div class="box-body">
    
-                                               <h4>下单价格设置</h4>
+                 <h4>下单价格设置</h4>
 				<table class="table table-bordered table-hover table-striped text-center" style="font-size: 14px;">
 					<tbody>
 					<tr>
@@ -52,14 +52,10 @@ $url="http://".$_SERVER['SERVER_NAME'].U('Register/signups',array('invitor' => $
            			 <th width="300" align="left">手续费率</th>
           			  <th width="140" align="left">最终价格</th>
 					</tr>
-	
                           <tr>
-							   <td align="center">{$yongjin}</td>
-
+							 <td align="center">{$yongjin}</td>
                				 <td align="left">{$shouxu}</td>
-
                				 <td><?php echo round($yongjin*(1+$shouxu),2)?></td>
-
 						</tr>		
                   </tbody>
 				</table>
@@ -72,9 +68,7 @@ $url="http://".$_SERVER['SERVER_NAME'].U('Register/signups',array('invitor' => $
 							<div class="col-sm-6">
 								     <input type="text" name="price" value="{$yongjin}" size="30" class="inpMain" />
 							</div>
-						</div>					
-
-						
+						</div>	
 					</div>
 				
 					<!-- /.box-body -->
@@ -86,7 +80,6 @@ $url="http://".$_SERVER['SERVER_NAME'].U('Register/signups',array('invitor' => $
 							</div>
 						</div>
 					</div>
-					
 				</form>
 	</div>
 </section>
