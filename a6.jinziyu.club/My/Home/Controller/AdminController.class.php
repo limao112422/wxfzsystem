@@ -290,7 +290,8 @@ class AdminController extends CommonsController {
 										$user1=$this->fenname($rel);//$info2['mobile'];
 										//存入金额记录
 										$text=$ttttxxxt.'推广分成';
-										$momsg=$this->getusermoney($user1,$bili1,$type,$text,$chantype,$chanid);
+										$mobile=$user->where(array('id'=>$rel))->setDec('mobile',$zh);
+										$momsg=$this->getusermoney($user1,$mobile,$bili1,$type,$text,$chantype,$chanid);
 										if($momsg){
 											//查询一级的id是否有上级是否有二级
 											$erji = $user->where(array('id' => $rel))->find();
@@ -305,7 +306,7 @@ class AdminController extends CommonsController {
 													$user2=$this->fenname($erjirel);//$erji['mobile'];
 													//存入金额记录
 													$text=$ttttxxxt.'推广费二级分成';
-													$momsg2=$this->getusermoney($user2,$mo2,$type,$text,$chantype,$chanid);
+													$momsg2=$this->getusermoney($user2,$erji['mobile'],$mo2,$type,$text,$chantype,$chanid);
 													if($momsg2){
 														//查询二级的id是否有上级  是否有三级
 														$sanji = $user->where(array('id' => $erjirel))->find();
@@ -320,7 +321,7 @@ class AdminController extends CommonsController {
 																$user3=$this->fenname($sanjirel);//$sanji['mobile'];
 																//存入金额记录
 																$text=$ttttxxxt.'推广费三级分成';
-																$momsg3=$this->getusermoney($user3,$mo3,$type,$text,$chantype,$chanid);
+																$momsg3=$this->getusermoney($user3,sanji['mobile'],$mo3,$type,$text,$chantype,$chanid);
 																//echo $snjiarel;exit;
 																if($momsg3){
 																	//$data['status'] = 1;
@@ -1786,8 +1787,9 @@ public function Admin_edits(){
               $bili1=$pass;
 			  $text="充值";
               $motype=1;//增加 
-              $type=2;//下单员
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type);
+			  $type=2;//下单员
+			  $mobile=$user->where(array('id'=>$id))->setDec('mobile',$zh);
+              $momsg=$this->getusermoney($user1,$mobile$bili1,$motype,$text,$type);
 			}
         }
 		$this->ajaxReturn($data);
@@ -1884,8 +1886,8 @@ public function Admin_edits(){
       		  $text2="提现手续费";
               $motype=2;//减少
               $type=1;//用户
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type);
-      		  $momsg2=$this->getusermoney($user1,$bili2,$motype,$text2,$type);
+			  $mobile2=$User->where(array('id'=>$id))->setDec('mobile',$zh);
+      		  $momsg2=$this->getusermoney($user1,$mobile2,$bili2,$motype,$text2,$type);
 		$this->success("结算成功!");
 	}
 
@@ -1913,8 +1915,9 @@ public function Admin_edits(){
               $bili1=$info['money'];
 			  $text="提现失败退还";
               $motype=1;//增加 
-              $type=1;//用户
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type);
+			  $type=1;//用户
+			  $mobile1=$info['userid'];
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type);
         }
 		$this->success("结算成功!");
 	}
@@ -3034,7 +3037,8 @@ public function card_xj(){
 										$user1=$this->fenname($rel);//$info2['mobile'];
 										//存入金额记录
 										$text=$ttttxxxt.'推广分成';
-										$momsg=$this->getusermoney($user1,$bili1,$type,$text,$chantype,$chanid);
+										$mobile1 = $info2["mobile"]
+										$momsg=$this->getusermoney($user1,$mobile1,$bili1,$type,$text,$chantype,$chanid);
 										if($momsg){
 											//查询一级的id是否有上级是否有二级
 											$erji = $user->where(array('id' => $rel))->find();
@@ -3049,7 +3053,8 @@ public function card_xj(){
 													$user2=$this->fenname($erjirel);//$erji['mobile'];
 													//存入金额记录
 													$text=$ttttxxxt.'推广费二级分成';
-													$momsg2=$this->getusermoney($user2,$mo2,$type,$text,$chantype,$chanid);
+													$mobile2 = $erji["mobile"]
+													$momsg2=$this->getusermoney($user2,$mobile2,$mo2,$type,$text,$chantype,$chanid);
 													if($momsg2){
 														//查询二级的id是否有上级  是否有三级
 														$sanji = $user->where(array('id' => $erjirel))->find();
@@ -3064,7 +3069,8 @@ public function card_xj(){
 																$user3=$this->fenname($sanjirel);//$sanji['mobile'];
 																//存入金额记录
 																$text=$ttttxxxt.'推广费三级分成';
-																$momsg3=$this->getusermoney($user3,$mo3,$type,$text,$chantype,$chanid);
+																$mobile3 = $sanji["mobile"]
+																$momsg3=$this->getusermoney($user3,$mobile3,$mo3,$type,$text,$chantype,$chanid);
 																//echo $snjiarel;exit;
 																if($momsg3){
 																	//$data['status'] = 1;
@@ -3341,8 +3347,9 @@ public function card_xj(){
 			  $text="超时退款";
               $motype=1;//增加 
               $type=2;//下单员
-              $id=$list[$i]['id'];
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+			  $id=$list[$i]['id'];
+			  $mobile1=$list[$i]['mobile']
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
               }
            }
           	if($list[$i]['status']==15){
@@ -3355,8 +3362,9 @@ public function card_xj(){
 			  $text="任务佣金";
               $motype=1;//增加 
               $type=1;//用户
-              $id=$list[$i]['id'];
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+			  $id=$list[$i]['id'];
+			  $mobile1=$list[$i]['mobile']
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
                  	if($momsg){
 											//查询一级的id是否有上级是否有二级
                                           	$rel=$Mu->where(array('id'=>$user1))->find();
@@ -3371,7 +3379,8 @@ public function card_xj(){
                                                	    $user2=$erji;
 													$motype=1;//增加
 													$text='任务二级佣金';
-													$momsg2=$this->getusermoney($user2,$mo2,$motype,$text,$type,$id);
+													$mobile1 = $cx['mobile'];
+													$momsg2=$this->getusermoney($user2,$mobile1,$mo2,$motype,$text,$type,$id);
 												
 												}
 											}
@@ -3388,8 +3397,9 @@ public function card_xj(){
 			  $text="订单退款";
               $motype=1;//增加 
               $type=2;//下单员
-              $id=$list[$i]['id'];
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+			  $id=$list[$i]['id'];
+			  $mobile1 = $list[$i]['mobile'];
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
               }
            }
           	if($list[$i]['status']==19){
@@ -3402,8 +3412,9 @@ public function card_xj(){
 			  $text="胜诉退款";
               $motype=1;//增加 
               $type=2;//下单员
-              $id=$list[$i]['id'];
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+			  $id=$list[$i]['id'];
+			  $mobile1 = $list[$i]['mobile'];
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
               }
            }
           	if($list[$i]['status']==20){
@@ -3418,8 +3429,9 @@ public function card_xj(){
 			  $text="任务佣金";
               $motype=1;//增加 
               $type=1;//用户
-              $id=$list[$i]['id'];
-              $momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+			  $id=$list[$i]['id'];
+			  $mobile1 = $list[$i]['mobile'];
+              $momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
                  	if($momsg){
 											//查询一级的id是否有上级是否有二级
                                           	$rel=$Mu->where(array('id'=>$user1))->find();
@@ -3434,7 +3446,8 @@ public function card_xj(){
                                                	    $user2=$erji;
 													$motype=1;//增加
 													$text='任务二级佣金';
-													$momsg2=$this->getusermoney($user2,$mo2,$motype,$text,$type,$id);
+													$mobile1 = $cx['mobile'];
+													$momsg2=$this->getusermoney($user2,$mobile1,$mo2,$motype,$text,$type,$id);
 												
 												}
 											}
@@ -3768,8 +3781,9 @@ public function jieshens_edit(){
 										$type=1;//用户变动
 										$user1=$info['tuiuser'];
 										$text=$ttttxxxt.'任务佣金';
-                                      	$motype=1;//增加
-										$momsg=$this->getusermoney($user1,$bili1,$motype,$text,$type,$id);
+										$motype=1;//增加
+										$mobile1 = $info['mobile'];
+										$momsg=$this->getusermoney($user1,$mobile1,$bili1,$motype,$text,$type,$id);
 										if($momsg){
 											//查询一级的id是否有上级是否有二级
                                           	$rel=$user->where(array('id'=>$info['tuiuser']))->find();
@@ -3786,7 +3800,8 @@ public function jieshens_edit(){
                                                	    $user2=$erji;
 													$motype=1;//增加
 													$text=$ttttxxxt.'任务二级佣金';
-													$momsg2=$this->getusermoney($user2,$mo2,$motype,$text,$type,$id);
+													$mobile1 = $cx['mobile'];
+													$momsg2=$this->getusermoney($user2,$mobile1,$mo2,$motype,$text,$type,$id);
 												
 												}
 											}
