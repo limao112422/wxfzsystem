@@ -43,7 +43,13 @@
                             <input type="text" name="sitetitle" value="{:C('cfg_sitetitle')}" size="80" class="inpMain" />
                         </td>
                     </tr> 
-         		
+                    
+                    <tr>
+                        <td align="right">手续费</td>
+                        <td>
+                            <input type="text" name="fencheng" value="{:C('cfg_shouxufei')}" size="80" class="inpMain" />
+                        </td>
+                    </tr>
 					   <tr>
                         <td align="right">用户端邀请分成比例</td>
                         <td>
@@ -129,7 +135,8 @@
                             <div style="display: none;">
                                 <input id="imgFile6" type="file" name="imgFile" style="display: none;">
                             </div>
-                            <div id="res_show_img6" style="display: none;"></div>                        </td>
+                            <div id="res_show_img6" style="display: none;"></div>                        
+                        </td>
                     </tr>	
                </tbody>
 				</table>
@@ -253,9 +260,6 @@
             }
         });
     });
-
-
-
 
 	//上传缩略图
     $(function (){
