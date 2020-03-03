@@ -116,6 +116,12 @@ class QudaoController extends ComController {
         $this->display();
 	}
 	
+
+	//下单
+	public function SigleApi()
+	{
+		
+	}
 	
 	
 	 public function tixian_chuli() {
