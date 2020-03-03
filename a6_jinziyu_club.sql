@@ -1689,6 +1689,7 @@ INSERT INTO `h_text` (`Id`, `title`, `disp`, `img`, `text`, `addtime`, `pv`, `ty
 CREATE TABLE IF NOT EXISTS `h_tixian` (
   `Id` int(11) NOT NULL,
   `userid` varchar(100) DEFAULT NULL,
+  `mobile` varchar(100) DEFAULT NULL,
   `money` float(11,2) DEFAULT NULL,
   `moneys` float(11,2) NOT NULL,
   `addtime` int(11) DEFAULT NULL,
@@ -1699,11 +1700,11 @@ CREATE TABLE IF NOT EXISTS `h_tixian` (
 -- 转存表中的数据 `h_tixian`
 --
 
-INSERT INTO `h_tixian` (`Id`, `userid`, `money`, `moneys`, `addtime`, `status`) VALUES
-(1, '2', 30.00, 27.00, 1575221094, 1),
-(2, '2', 30.00, 27.00, 1575221208, 2),
-(3, '2', 102.00, 91.80, 1576649546, 2),
-(4, '2', 20.00, 18.00, 1578143052, 1);
+INSERT INTO `h_tixian` (`Id`, `userid`, `mobile`,  `money`, `moneys`, `addtime`, `status`) VALUES
+(1, '2','100000000000', 30.00, 27.00, 1575221094, 1),
+(2, '2','100000000000', 30.00, 27.00, 1575221208, 2),
+(3, '2','100000000000', 102.00, 91.80, 1576649546, 2),
+(4, '2','100000000000', 20.00, 18.00, 1578143052, 1);
 
 -- --------------------------------------------------------
 
