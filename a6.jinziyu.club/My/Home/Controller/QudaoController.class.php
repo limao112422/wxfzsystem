@@ -115,13 +115,20 @@ class QudaoController extends ComController {
         layout(true);
         $this->display();
 	}
-	
 
 	//下单
 	public function SigleApi()
 	{
-		
+
 	}
+
+	//修改订单状态
+	public function mark()
+	{
+
+	}
+
+	// public function 
 	
 	
 	 public function tixian_chuli() {
